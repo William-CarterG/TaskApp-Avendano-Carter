@@ -8,4 +8,7 @@
     <string name="Project1">Project 1: Task App</string>
     <string name="Project2">Project 2: Blog App</string>
     <string name="Project3">Project 3: Hero App</string>
+    <string name="logout">Logout</string>
+    <string name="taskapp">Task App</string>
+    <string name="role">Role</string>
 </resources>
