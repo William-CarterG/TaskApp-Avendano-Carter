@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import cl.uandes.taskapp.databinding.FragmentLoginBinding
+import androidx.navigation.fragment.findNavController
 import android.util.Patterns
+
 
 class LoginFragment : Fragment() {
 
@@ -37,11 +39,14 @@ class LoginFragment : Fragment() {
             val email = Patterns.EMAIL_ADDRESS.matcher(emailEntered).matches()
 
 
-            //Ultra secret email, email = "
+            //Ultra secret email is actually any email with the right format :)
             //Ultra secret password, password="123456"
             if (passwordEntered == "123456" && email) {
-                //TODO
-                //The logic of the navigation.
+
+                //If credentials are okay, enter the HomeProjects view, where you can see all your projects
+                val action = LoginFragmentDirections.actionLoginFragmentToHomeProjects()
+                findNavController().navigate(action)
+
             }
             else {
                 Toast.makeText(context, "Invalid credentials", Toast.LENGTH_LONG).show()

@@ -8,5 +8,15 @@
         android:id="@+id/loginFragment"
         android:name="cl.uandes.taskapp.ui.view.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeProjects"
+            app:destination="@id/homeProjectsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeProjectsFragment"
+        android:name="cl.uandes.taskapp.ui.HomeProjects"
+        android:label="fragment_home_projects"
+        tools:layout="@layout/fragment_home_projects" />
 </navigation>
