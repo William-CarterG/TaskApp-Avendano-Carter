@@ -4,6 +4,8 @@
     <string name="passwd">Password</string>
     <string name="email_example_com">email@example.com</string>
     <string name="register">Register</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_projects">Projects</string>
+    <string name="Project1">Project 1: Task App</string>
+    <string name="Project2">Project 2: Blog App</string>
+    <string name="Project3">Project 3: Hero App</string>
 </resources>
