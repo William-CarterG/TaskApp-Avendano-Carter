@@ -25,9 +25,10 @@ class ProjectProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        returnToHomeProjects()
     }
 
-    private fun return_to_homeProjects(){
+    private fun returnToHomeProjects(){
         val leaveProjectProfileButton = binding.leaveProjectProfileButton
 
         leaveProjectProfileButton.setOnClickListener {
