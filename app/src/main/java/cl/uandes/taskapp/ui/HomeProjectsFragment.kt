@@ -25,6 +25,7 @@ class HomeProjectsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         createNewProject()
+        viewProjectProfileExample()
     }
 
     private fun createNewProject(){
@@ -35,4 +36,14 @@ class HomeProjectsFragment : Fragment() {
             findNavController().navigate(action)
         }
     }
+
+    private fun viewProjectProfileExample(){
+        val projectProfileExampleButton = binding.projectProfileExampleButton
+        projectProfileExampleButton.setOnClickListener {
+            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToProjectProfileFragment()
+            findNavController().navigate(action)
+        }
+    }
+
+    //TODO: Implement example project profile button, HomeTasks Button & show filter button...
 }
