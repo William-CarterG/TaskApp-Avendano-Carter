@@ -45,5 +45,11 @@ class HomeProjectsFragment : Fragment() {
         }
     }
 
-    //TODO: Implement example project profile button, HomeTasks Button & show filter button...
+    private fun filterProjectsByDate(){
+        val filetrProjectsByDateButton = binding.filetrByDateButton
+        filetrProjectsByDateButton.setOnClickListener {
+            //TODO: Logic of filtering the projects by date
+            //...
+        }
+    }
 }
