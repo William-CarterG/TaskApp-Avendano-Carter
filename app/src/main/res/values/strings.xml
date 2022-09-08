@@ -57,4 +57,5 @@
     <string name="add_tasks">Add Tasks</string>
     <string name="project_example">See the project profile example</string>
     <string name="filter_by_date">Filter by Date</string>
+    <string name="tasks">Tasks</string>
 </resources>

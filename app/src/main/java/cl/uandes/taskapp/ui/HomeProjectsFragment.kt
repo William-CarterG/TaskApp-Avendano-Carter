@@ -24,8 +24,10 @@ class HomeProjectsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        filterProjectsByDate()
         createNewProject()
         viewProjectProfileExample()
+        toTasksHome()
     }
 
     private fun createNewProject(){
@@ -46,10 +48,18 @@ class HomeProjectsFragment : Fragment() {
     }
 
     private fun filterProjectsByDate(){
-        val filetrProjectsByDateButton = binding.filetrByDateButton
-        filetrProjectsByDateButton.setOnClickListener {
+        val filterProjectsByDateButton = binding.filetrByDateButton
+        filterProjectsByDateButton.setOnClickListener {
             //TODO: Logic of filtering the projects by date
             //...
+        }
+    }
+
+    private fun toTasksHome(){
+        val homeTasksButton = binding.homeTasksButton
+        homeTasksButton.setOnClickListener {
+            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToHomeTasksFragment()
+            findNavController().navigate(action)
         }
     }
 }
