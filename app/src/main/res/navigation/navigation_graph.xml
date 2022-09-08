@@ -16,7 +16,20 @@
 
     <fragment
         android:id="@+id/homeProjectsFragment"
-        android:name="cl.uandes.taskapp.ui.HomeProjects"
+        android:name="cl.uandes.taskapp.ui.HomeProjectsFragment"
         android:label="fragment_home_projects"
-        tools:layout="@layout/fragment_home_projects" />
+        tools:layout="@layout/fragment_home_projects" >
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_createProjectFragment"
+            app:destination="@id/createProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProjectFragment"
+        android:name="cl.uandes.taskapp.ui.CreateProjectFragment"
+        android:label="fragment_create_project"
+        tools:layout="@layout/fragment_create_project" >
+        <action
+            android:id="@+id/action_createProjectFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+    </fragment>
 </navigation>

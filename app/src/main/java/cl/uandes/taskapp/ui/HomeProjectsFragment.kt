@@ -9,7 +9,7 @@ import android.widget.Toast
 import android.util.Patterns
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 
-class HomeProjects : Fragment() {
+class HomeProjectsFragment : Fragment() {
     private lateinit var binding: FragmentHomeProjectsBinding
 
     override fun onCreateView(
