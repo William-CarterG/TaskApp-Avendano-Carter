@@ -192,4 +192,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/addTaskButton"
+        android:layout_width="109dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="656dp"
+        android:text="@string/add_tasks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //TODO, Create "add tasks" button
 </androidx.constraintlayout.widget.ConstraintLayout>
