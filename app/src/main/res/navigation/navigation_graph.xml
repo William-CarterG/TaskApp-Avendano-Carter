@@ -116,6 +116,10 @@
         android:id="@+id/taskAddMemberFragment"
         android:name="cl.uandes.taskapp.ui.TaskAddMemberFragment"
         android:label="fragment_task_add_member"
-        tools:layout="@layout/fragment_task_add_member" />
+        tools:layout="@layout/fragment_task_add_member" >
+        <action
+            android:id="@+id/action_taskAddMemberFragment_to_taskProfileFragment"
+            app:destination="@id/taskProfileFragment" />
+    </fragment>
 
 </navigation>

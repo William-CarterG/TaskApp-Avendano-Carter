@@ -37,8 +37,8 @@ class TaskAddMemberFragment  : Fragment() {
     private fun returnToTaskProfile(){
         val leaveAddMembersButton = binding.leaveTaskAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            //TODO: Navigation back to task profile
-            //...
+            val action = TaskAddMemberFragmentDirections.actionTaskAddMemberFragmentToTaskProfileFragment()
+            findNavController().navigate(action)
         }
     }
 }
