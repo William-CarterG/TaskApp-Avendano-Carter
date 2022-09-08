@@ -65,6 +65,10 @@
         android:id="@+id/viewProjectRequestFragment"
         android:name="cl.uandes.taskapp.ui.ViewProjectRequestFragment"
         android:label="fragment_view_project_request"
-        tools:layout="@layout/fragment_view_project_request" />
+        tools:layout="@layout/fragment_view_project_request" >
+        <action
+            android:id="@+id/action_viewProjectRequestFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
+    </fragment>
 
 </navigation>
