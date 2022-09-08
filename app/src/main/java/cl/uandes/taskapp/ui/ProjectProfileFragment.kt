@@ -9,6 +9,7 @@ import android.widget.Toast
 import android.util.Patterns
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentProjectProfileBinding
+import androidx.navigation.fragment.findNavController
 
 class ProjectProfileFragment : Fragment() {
     private lateinit var binding: FragmentProjectProfileBinding
@@ -24,5 +25,14 @@ class ProjectProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun return_to_homeProjects(){
+        val leaveProjectProfileButton = binding.leaveProjectProfileButton
+
+        leaveProjectProfileButton.setOnClickListener {
+            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToHomeProjectsFragment()
+            findNavController().navigate(action)
+        }
     }
 }

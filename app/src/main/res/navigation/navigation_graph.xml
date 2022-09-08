@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeProjectsFragment_to_createProjectFragment"
             app:destination="@id/createProjectFragment" />
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/createProjectFragment"
@@ -30,6 +33,15 @@
         tools:layout="@layout/fragment_create_project" >
         <action
             android:id="@+id/action_createProjectFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectProfileFragment"
+        android:name="cl.uandes.taskapp.ui.ProjectProfileFragment"
+        android:label="fragment_project_profile"
+        tools:layout="@layout/fragment_project_profile" >
+        <action
+            android:id="@+id/action_projectProfileFragment_to_homeProjectsFragment"
             app:destination="@id/homeProjectsFragment" />
     </fragment>
 </navigation>
