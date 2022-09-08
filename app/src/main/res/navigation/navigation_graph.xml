@@ -97,6 +97,10 @@
         android:id="@+id/taskProfileFragment"
         android:name="cl.uandes.taskapp.ui.TaskProfileFragment"
         android:label="fragment_task_profile"
-        tools:layout="@layout/fragment_task_profile" />
+        tools:layout="@layout/fragment_task_profile" >
+        <action
+            android:id="@+id/action_taskProfileFragment_to_homeTasksFragment"
+            app:destination="@id/homeTasksFragment" />
+    </fragment>
 
 </navigation>

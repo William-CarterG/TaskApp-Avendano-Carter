@@ -29,14 +29,14 @@ class TaskProfileFragment : Fragment() {
     }
 
     private fun returnToHomeTasks(){
-        /*
-        val leaveProjectProfileButton = binding.leaveTaskProfileButton
 
-        leaveProjectProfileButton.setOnClickListener {
-            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToHomeProjectsFragment()
+        val leaveTaskProfileButton = binding.leaveTaskProfileButton
+
+        leaveTaskProfileButton.setOnClickListener {
+            val action = TaskProfileFragmentDirections.actionTaskProfileFragmentToHomeTasksFragment()
             findNavController().navigate(action)
         }
-        */
+
 
     }
 
