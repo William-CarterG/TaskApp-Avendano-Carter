@@ -18,7 +18,7 @@
     <string name="project_profile_title">Task 4: Example Project</string>
     <string name="project_profile_description"><b>Description:</b> Here you\'ll be able to see whatever description your project has.</string>
     <string name="project_participants"><u><b>Project participants:</b></u></string>
-    <string name="project_participants_example">-Carmencita Avedaño</string>
+    <string name="project_participants_example">-Carmencita Avedaño, Team Lead</string>
     <string name="project_creation_date"><u><b>Project Creation Date</b></u></string>
     <string name="project_creation_date_example">08/09/2022</string>
     <string name="project_deadline"><u><b>Project Deadline</b></u></string>
