@@ -15,7 +15,7 @@
     <string name="new_project_title">New project title:</string>
     <string name="new_project_description">New project description:</string>
     <string name="submit_new_project">Create Project</string>
-    <string name="project_profile_title">Task 4: Example Project</string>
+    <string name="project_profile_title">Project 4: Example Project</string>
     <string name="project_profile_description"><b>Description:</b> Here you\'ll be able to see whatever description your project has.</string>
     <string name="project_participants"><u><b>Project participants:</b></u></string>
     <string name="project_participants_example">-Carmencita Avedaño, Team Lead</string>
@@ -37,7 +37,16 @@
     <string name="add_button">+ ADD TO PROJECT</string>
     <string name="view_project_request_title">Pending Requests</string>
     <string name="home_tasks">My Tasks (developer view)</string>
-    <string name="Project1task">Proyecto 1: Task App: Add tasks menu ; Asigned by Julio Cortés</string>
-    <string name="Project2task">Proyecto 2: Blog App: Implement navigation ; Asigned by María Pía Sanchez</string>
+    <string name="Project1task">Proyecto 1: Task App: Add tasks menu ; Assigned by Julio Cortés</string>
+    <string name="Project2task">Proyecto 2: Blog App: Implement navigation ; Assigned by María Pía Sanchez</string>
     <string name="task_example">See task profile example</string>
+    <string name="task_profile_title">Task 4: Example Task</string>
+    <string name="task_profile_description"><b>Description:</b> Here you\'ll be able to see whatever description your task has.</string>
+    <string name="task_creator"><b>Task Creator:</b>Julio Cortés</string>
+    <string name="task_participants"><u><b>Task participants:</b></u></string>
+    <string name="task_participants_example">William Carter, Developer</string>
+    <string name="task_comments_title"><u><b>Comments:</b></u></string>
+    <string name="task_comments_example">- William Carter: Don\'t forget that this view is how a team lead would see it. A developer would alos have the option to add comments here...</string>
+    <string name="task_deadline"><u><b>Task Deadline</b></u></string>
+    <string name="task_status"><b>Task Status</b></string>
 </resources>
