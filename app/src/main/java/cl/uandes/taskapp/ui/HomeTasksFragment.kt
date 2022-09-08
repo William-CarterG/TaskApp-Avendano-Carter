@@ -34,5 +34,12 @@ class HomeTasksFragment : Fragment() {
             findNavController().navigate(action)
         }
     }
-    //TODO: Navigate to HomeProjects and to TaskExample
+
+    private fun toTaskProfileExample(){
+        val taskProfileExampleButton = binding.taskProfileExampleButton
+        taskProfileExampleButton.setOnClickListener {
+            val action = HomeTasksFragmentDirections.actionHomeTasksFragmentToTaskProfileFragment()
+            findNavController().navigate(action)
+        }
+    }
 }
