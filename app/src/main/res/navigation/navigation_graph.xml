@@ -96,6 +96,9 @@
         <action
             android:id="@+id/action_createTaskFragment_to_taskAddMemberFragment"
             app:destination="@id/taskAddMemberFragment" />
+        <action
+            android:id="@+id/action_createTaskFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
     </fragment>
     <fragment
         android:id="@+id/taskProfileFragment"

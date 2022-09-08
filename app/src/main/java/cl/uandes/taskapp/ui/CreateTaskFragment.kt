@@ -31,7 +31,8 @@ class CreateTaskFragment : Fragment() {
         val returnToProjectsButton = binding.returnToProjectsButton
 
         returnToProjectsButton.setOnClickListener {
-            //TODO: Navigation back to project
+            val action = CreateTaskFragmentDirections.actionCreateTaskFragmentToProjectProfileFragment()
+            findNavController().navigate(action)
         }
     }
 
