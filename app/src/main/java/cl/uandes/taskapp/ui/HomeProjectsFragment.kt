@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import android.util.Patterns
+import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 
 class HomeProjectsFragment : Fragment() {
@@ -23,5 +24,15 @@ class HomeProjectsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        createNewProject()
+    }
+
+    private fun createNewProject(){
+        val createNewProjectButton = binding.AddNewProjectButton
+
+        createNewProjectButton.setOnClickListener {
+            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToCreateProjectFragment()
+            findNavController().navigate(action)
+        }
     }
 }
