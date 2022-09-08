@@ -14,4 +14,5 @@
     <string name="new_project">New Project</string>
     <string name="new_project_title">New project title:</string>
     <string name="new_project_description">New project description:</string>
+    <string name="submit_new_project">Create Project</string>
 </resources>
