@@ -41,14 +41,11 @@ class TaskProfileFragment : Fragment() {
     }
 
     private fun addMembers(){
-        /*
         val addParticipantsButton = binding.addParticipantsButton
         addParticipantsButton.setOnClickListener {
-            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToAddMemberFragment()
+            val action = TaskProfileFragmentDirections.actionTaskProfileFragmentToTaskAddMemberFragment()
             findNavController().navigate(action)
 
         }
-
-         */
     }
 }
