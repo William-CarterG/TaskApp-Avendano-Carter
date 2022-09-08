@@ -23,6 +23,7 @@ class AddMemberFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         addMemberToProject()
+        returnToHomeProjects()
     }
 
     private fun addMemberToProject(){
@@ -30,6 +31,14 @@ class AddMemberFragment : Fragment() {
         addMemberButton.setOnClickListener {
             //TODO: Logic of adding a new member to project
             //...
+        }
+    }
+
+    private fun returnToHomeProjects(){
+        val leaveAddMembersButton = binding.leaveAddMembersButton
+        leaveAddMembersButton.setOnClickListener {
+            val action = AddMemberFragmentDirections.actionAddMemberFragmentToProjectProfileFragment()
+            findNavController().navigate(action)
         }
     }
 }

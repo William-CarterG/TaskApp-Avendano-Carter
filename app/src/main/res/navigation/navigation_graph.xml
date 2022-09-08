@@ -44,4 +44,16 @@
             android:id="@+id/action_projectProfileFragment_to_homeProjectsFragment"
             app:destination="@id/homeProjectsFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/addMemberFragment"
+        android:name="cl.uandes.taskapp.ui.AddMemberFragment"
+        android:label="AddMemberFragment"
+        tools:layout="@layout/fragment_add_member">
+
+        <action
+            android:id="@+id/action_addMemberFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
+    </fragment>
+
 </navigation>
