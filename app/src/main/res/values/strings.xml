@@ -30,4 +30,9 @@
     <string name="view_participants_requests">View requests (1)</string>
     <string name="project_admin"><b>Project admin:</b>Julio Cortés</string>
     <string name="project_status"><b>Project status:</b> In process...</string>
+    <string name="add_participants_example1">William Carter, Developer</string>
+    <string name="add_participants_example2">Pablo Silva, Developer</string>
+    <string name="add_participants_example3">María Pía Sanchez, Team Lead</string>
+    <string name="add_participants_example"><b>Available Users:</b></string>
+    <string name="add_button">+ ADD TO PROJECT</string>
 </resources>
