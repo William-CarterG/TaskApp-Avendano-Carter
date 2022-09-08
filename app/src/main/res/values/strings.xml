@@ -47,7 +47,11 @@
     <string name="task_participants_example">William Carter, Developer</string>
     <string name="task_comments_title"><u><b>Comments:</b></u></string>
     <string name="task_comments_example">- William Carter: Don\'t forget that this view is how a team lead would see it. A developer would alos have the option to add comments here...</string>
-    <string name="task_deadline"><u><b>Task Deadline</b></u></string>
+    <string name="task_deadline"><b>Task Deadline</b></string>
     <string name="task_status"><b>Task Status</b></string>
     <string name="add_task_member_example">-Carmencita Avedaño, Developer</string>
+    <string name="new_task">New Task</string>
+    <string name="new_task_title"><b>New task title:</b></string>
+    <string name="new_task_description"><b>New task description:</b></string>
+    <string name="create_task_button_text">Add members</string>
 </resources>
