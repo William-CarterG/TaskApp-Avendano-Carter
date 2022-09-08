@@ -16,3 +16,5 @@ password: 123456
 For the project profile, should have in mind that:
 - Percentage progress of a project may vary, as new tasks can be added to a project before its deadline.
 - A project can have three different statuses (Successful, Failed, In Process... )
+- A project is always in process if the deadline has not been reached. Once the deadline has been reached, the admin will have the ability to decide if the result 
+status is successful or failed.
