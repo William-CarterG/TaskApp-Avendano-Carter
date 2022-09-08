@@ -16,16 +16,18 @@
     <string name="new_project_description">New project description:</string>
     <string name="submit_new_project">Create Project</string>
     <string name="project_profile_title">Task 4: Example Project</string>
-    <string name="project_profile_description">Description: Here you\'ll be able to see whatever description your project has.</string>
-    <string name="project_participants"><u>Project participants:</u></string>
+    <string name="project_profile_description"><b>Description:</b> Here you\'ll be able to see whatever description your project has.</string>
+    <string name="project_participants"><u><b>Project participants:</b></u></string>
     <string name="project_participants_example">-Carmencita Avedaño</string>
-    <string name="project_creation_date"><u>Project Creation Date</u></string>
+    <string name="project_creation_date"><u><b>Project Creation Date</b></u></string>
     <string name="project_creation_date_example">08/09/2022</string>
-    <string name="project_deadline"><u>Project Deadline</u></string>
+    <string name="project_deadline"><u><b>Project Deadline</b></u></string>
     <string name="project_deadline_example">15/11/2022</string>
-    <string name="tasks_todo"><u>Most Urgent Tasks</u></string>
+    <string name="tasks_todo"><u><b>Most Urgent Tasks</b></u></string>
     <string name="tasks_todo_example">-Task app, Projecto Parte 1; Implement Navigation</string>
-    <string name="project_percentage">Percentage of project completed: 0%</string>
+    <string name="project_percentage"><b>Percentage of project completed:</b> 0%</string>
     <string name="add_participants">Add new members</string>
     <string name="view_participants_requests">View requests (1)</string>
+    <string name="project_admin"><b>Project admin:</b>Julio Cortés</string>
+    <string name="project_status"><b>Project status:</b> In process...</string>
 </resources>

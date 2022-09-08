@@ -65,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black" />
+        />
 
     <TextView
         android:id="@+id/creationDateExampleTextView"
@@ -88,16 +88,16 @@
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"/>
+        />
 
     <TextView
         android:id="@+id/tasksTODOExampleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="484dp"
         android:text="@string/tasks_todo_example"
         app:layout_constraintEnd_toEndOf="@id/profileProjectTextView"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,7 +111,7 @@
         app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"/>
+        />
 
     <TextView
         android:id="@+id/projectDeadlineExampleTextView"
@@ -130,7 +130,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="364dp"
         android:text="@string/project_deadline"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@id/profileProjectTextView"
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,13 +139,12 @@
         android:id="@+id/projectPercentageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="552dp"
         android:text="@string/project_percentage"
         app:layout_constraintEnd_toEndOf="@id/profileProjectTextView"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addParticipantsButton"
@@ -170,5 +168,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="@color/green"/>
+
+    <TextView
+        android:id="@+id/projectAdminTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:text="@string/project_admin"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/profileProjectTextView"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/projectStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="584dp"
+        android:text="@string/project_status"
+        app:layout_constraintEnd_toEndOf="@id/profileProjectTextView"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
