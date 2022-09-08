@@ -80,7 +80,11 @@
         android:id="@+id/homeTasksFragment"
         android:name="cl.uandes.taskapp.ui.HomeTasksFragment"
         android:label="fragment_home_tasks"
-        tools:layout="@layout/fragment_home_tasks" />
+        tools:layout="@layout/fragment_home_tasks" >
+        <action
+            android:id="@+id/action_homeTasksFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createTaskFragment"
         android:name="cl.uandes.taskapp.ui.CreateTaskFragment"

@@ -26,5 +26,12 @@ class HomeTasksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    private fun toHomeProjects(){
+        val homeProjectsButton = binding.homeProjectsButton
+        homeProjectsButton.setOnClickListener {
+            val action = HomeTasksFragmentDirections.actionHomeTasksFragmentToHomeProjectsFragment()
+            findNavController().navigate(action)
+        }
+    }
     //TODO: Navigate to HomeProjects and to TaskExample
 }
