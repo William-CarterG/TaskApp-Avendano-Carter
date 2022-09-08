@@ -11,4 +11,7 @@
     <string name="logout">Logout</string>
     <string name="taskapp">Task App</string>
     <string name="role">Role</string>
+    <string name="new_project">New Project</string>
+    <string name="new_project_title">New project title:</string>
+    <string name="new_project_description">New project description:</string>
 </resources>
