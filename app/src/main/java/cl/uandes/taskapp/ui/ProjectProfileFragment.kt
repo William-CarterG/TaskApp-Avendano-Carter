@@ -28,6 +28,7 @@ class ProjectProfileFragment : Fragment() {
         returnToHomeProjects()
         addMembers()
         viewPendingRequests()
+        addTask()
     }
 
     private fun returnToHomeProjects(){
@@ -52,6 +53,14 @@ class ProjectProfileFragment : Fragment() {
         val viewPendingRequestsButton = binding.acceptParticipantsButton
         viewPendingRequestsButton.setOnClickListener {
             val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToViewProjectRequestFragment()
+            findNavController().navigate(action)
+        }
+    }
+
+    private fun addTask(){
+        val addTaskButton = binding.addTaskButton
+        addTaskButton.setOnClickListener {
+            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToCreateTaskFragment()
             findNavController().navigate(action)
         }
     }
