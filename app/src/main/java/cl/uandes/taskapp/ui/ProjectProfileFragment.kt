@@ -36,4 +36,13 @@ class ProjectProfileFragment : Fragment() {
             findNavController().navigate(action)
         }
     }
+
+    private fun addMembers(){
+        val addParticipantsButton = binding.addParticipantsButton
+        addParticipantsButton.setOnClickListener {
+            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToAddMemberFragment()
+            findNavController().navigate(action)
+
+        }
+    }
 }
