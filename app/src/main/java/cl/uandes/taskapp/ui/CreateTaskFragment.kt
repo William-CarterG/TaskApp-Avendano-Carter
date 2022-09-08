@@ -39,8 +39,8 @@ class CreateTaskFragment : Fragment() {
         val createNewTaskButton = binding.createNewTaskButton
 
         createNewTaskButton.setOnClickListener {
-            //TODO: Navigation to add new members
-            //...
+            val action = CreateTaskFragmentDirections.actionCreateTaskFragmentToTaskAddMemberFragment()
+            findNavController().navigate(action)
 
         }
     }

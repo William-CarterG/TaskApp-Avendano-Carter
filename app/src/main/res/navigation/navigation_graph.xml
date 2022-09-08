@@ -92,7 +92,11 @@
         android:id="@+id/createTaskFragment"
         android:name="cl.uandes.taskapp.ui.CreateTaskFragment"
         android:label="fragment_create_task"
-        tools:layout="@layout/fragment_create_task" />
+        tools:layout="@layout/fragment_create_task" >
+        <action
+            android:id="@+id/action_createTaskFragment_to_taskAddMemberFragment"
+            app:destination="@id/taskAddMemberFragment" />
+    </fragment>
     <fragment
         android:id="@+id/taskProfileFragment"
         android:name="cl.uandes.taskapp.ui.TaskProfileFragment"
