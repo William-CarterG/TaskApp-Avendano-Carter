@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_projectProfileFragment_to_addMemberFragment"
             app:destination="@id/addMemberFragment" />
+        <action
+            android:id="@+id/action_projectProfileFragment_to_viewProjectRequestFragment"
+            app:destination="@id/viewProjectRequestFragment" />
     </fragment>
 
     <fragment
@@ -58,5 +61,10 @@
             android:id="@+id/action_addMemberFragment_to_projectProfileFragment"
             app:destination="@id/projectProfileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/viewProjectRequestFragment"
+        android:name="cl.uandes.taskapp.ui.ViewProjectRequestFragment"
+        android:label="fragment_view_project_request"
+        tools:layout="@layout/fragment_view_project_request" />
 
 </navigation>

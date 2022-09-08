@@ -26,6 +26,8 @@ class ProjectProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         returnToHomeProjects()
+        addMembers()
+        viewPendingRequests()
     }
 
     private fun returnToHomeProjects(){
@@ -43,6 +45,14 @@ class ProjectProfileFragment : Fragment() {
             val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToAddMemberFragment()
             findNavController().navigate(action)
 
+        }
+    }
+
+    private fun viewPendingRequests(){
+        val viewPendingRequestsButton = binding.acceptParticipantsButton
+        viewPendingRequestsButton.setOnClickListener {
+            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToViewProjectRequestFragment()
+            findNavController().navigate(action)
         }
     }
 }
