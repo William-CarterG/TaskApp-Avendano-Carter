@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_loginFragment_to_homeProjects"
             app:destination="@id/homeProjectsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
 
     <fragment
@@ -120,6 +123,17 @@
         <action
             android:id="@+id/action_taskAddMemberFragment_to_taskProfileFragment"
             app:destination="@id/taskProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="cl.uandes.taskapp.ui.view.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
     </fragment>
 
 </navigation>
