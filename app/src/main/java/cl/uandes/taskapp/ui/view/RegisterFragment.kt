@@ -31,6 +31,7 @@ class RegisterFragment : Fragment() {
         var registerButton = binding.registerButton
         registerButton.setOnClickListener {
             //TODO: validate data and navigate.
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
 
         }
