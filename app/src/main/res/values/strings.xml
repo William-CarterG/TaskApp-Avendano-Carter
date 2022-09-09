@@ -59,4 +59,5 @@
     <string name="filter_by_date">Filter by Date</string>
     <string name="tasks">Tasks</string>
     <string name="create_new">Create a new project!</string>
+    <string name="create_new_task">Create a new task!</string>
 </resources>
