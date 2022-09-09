@@ -1,6 +1,7 @@
 package cl.uandes.taskapp.ui.view
 
 import android.os.Bundle
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,11 +29,26 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val emailEntered = binding.editTextTextEmailAddress.text.toString()
         var registerButton = binding.registerButton
+
+
+        val cond = Patterns.EMAIL_ADDRESS.matcher(emailEntered).matches()
+
         registerButton.setOnClickListener {
             //TODO: validate data and navigate.
-            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-            }
 
+            if (Patterns.EMAIL_ADDRESS.matcher(emailEntered).matches()) {
+                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+            }
+        }
+        toLogin()
+    }
+
+    private fun toLogin() {
+        var loginButton = binding.loginButton
+        loginButton.setOnClickListener{
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
     }
+}
