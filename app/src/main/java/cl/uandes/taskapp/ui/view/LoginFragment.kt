@@ -9,7 +9,7 @@ import android.widget.Toast
 import cl.uandes.taskapp.databinding.FragmentLoginBinding
 import androidx.navigation.fragment.findNavController
 import android.util.Patterns
-
+import cl.uandes.taskapp.R
 
 class LoginFragment : Fragment() {
 
@@ -27,6 +27,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loginAction()
+        registerAction()
     }
 
     private fun loginAction() {
@@ -52,6 +53,14 @@ class LoginFragment : Fragment() {
                 Toast.makeText(context, "Invalid credentials", Toast.LENGTH_LONG).show()
             }
 
+        }
+    }
+
+    private fun registerAction() {
+        val registerButton = binding.registerButton
+
+        registerButton.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
     }
 }
