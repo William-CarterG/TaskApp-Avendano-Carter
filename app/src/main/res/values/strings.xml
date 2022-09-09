@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">TaskApp</string>
     <string name="login">Login</string>
-    <string name="passwd">Password</string>
-    <string name="email_example_com">email@example.com</string>
+    <string name="passwd"><font size = "20">Password</font></string>
+    <string name="email_example_com"><font size = "20">email@example.com </font></string>
     <string name="register">Register</string>
     <string name="home_projects">Projects</string>
     <string name="Project1">Project 1: Task App</string>
@@ -10,7 +10,7 @@
     <string name="Project3">Project 3: Hero App</string>
     <string name="logout">Logout</string>
     <string name="taskapp">Task App</string>
-    <string name="role">Role</string>
+    <string name="role"><font size = "20">Role</font></string>
     <string name="new_project">New Project</string>
     <string name="new_project_title">New project title:</string>
     <string name="new_project_description">New project description:</string>
