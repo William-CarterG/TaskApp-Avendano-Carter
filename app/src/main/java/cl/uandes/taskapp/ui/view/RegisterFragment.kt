@@ -12,6 +12,8 @@ import cl.uandes.taskapp.R
 import cl.uandes.taskapp.databinding.FragmentRegisterBinding
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import cl.uandes.taskapp.data.datasources.InMemoryDataSource
+import cl.uandes.taskapp.data.model.User
 
 class RegisterFragment : Fragment() {
 
@@ -28,17 +30,20 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val emailEntered = binding.editTextTextEmailAddress.text.toString()
         var registerButton = binding.registerButton
 
-
-        val cond = Patterns.EMAIL_ADDRESS.matcher(emailEntered).matches()
-
         registerButton.setOnClickListener {
-            //TODO: validate data and navigate.
+            val emailEntered = binding.editTextTextEmailAddress.text.toString()
+            val passEntered = binding.editTextTextPassword.text.toString()
+            val roleEntered = binding.editTextTextRole.text.toString()
 
-            if (Patterns.EMAIL_ADDRESS.matcher(emailEntered).matches()) {
+            val userInData = InMemoryDataSource.users.find {it.email == emailEntered}
+
+            if (userInData != null) {
+                Toast.makeText(context,"User already exists.", Toast.LENGTH_LONG).show()
+
+            } else {
+                InMemoryDataSource.users.add(User(InMemoryDataSource.users.size.toLong(),emailEntered,passEntered,roleEntered))
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
         }
