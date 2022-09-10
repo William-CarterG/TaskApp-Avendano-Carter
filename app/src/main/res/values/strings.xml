@@ -60,4 +60,9 @@
     <string name="tasks">Tasks</string>
     <string name="create_new">Create a new project!</string>
     <string name="create_new_task">Create a new task!</string>
+    <string name="profile">Profile</string>
+    <string name="stat1">Projects you have participated: 10</string>
+    <string name="stat2">Tasks you have participated: 13</string>
+    <string name="stat3">Comments you have written: 30</string>
+    <string name="stat4">Success ratio: 85%</string>
 </resources>
