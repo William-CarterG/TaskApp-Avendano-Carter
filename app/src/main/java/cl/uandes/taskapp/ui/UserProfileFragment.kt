@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import cl.uandes.taskapp.databinding.FragmentLoginBinding
 import androidx.navigation.fragment.findNavController
-import android.util.Patterns
 import cl.uandes.taskapp.R
 import cl.uandes.taskapp.databinding.FragmentUserProfileBinding
 
@@ -30,6 +28,9 @@ class UserProfileFragment : Fragment() {
     }
 
     private fun logoutAction() {
-
+        val logoutButton = binding.logoutButton
+        logoutButton.setOnClickListener{
+            findNavController().navigate(R.id.action_userProfileFragment_to_loginFragment)
+        }
     }
 }
