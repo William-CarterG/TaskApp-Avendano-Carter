@@ -8,11 +8,14 @@
 
     <TextView
         android:id="@+id/loginTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="415dp"
+        android:layout_height="130dp"
+        android:background="#008ECC"
+        android:gravity="center"
+        android:padding="20sp"
         android:text="@string/login"
-        android:padding="48sp"
         android:textSize="40sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,6 +77,7 @@
         android:layout_marginBottom="60dp"
         android:text="@string/register"
         android:textSize="15sp"
+        android:backgroundTint="#9E50F0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
