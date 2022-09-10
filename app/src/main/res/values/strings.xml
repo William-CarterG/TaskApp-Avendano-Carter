@@ -65,4 +65,5 @@
     <string name="stat2">Tasks you have participated: 13</string>
     <string name="stat3">Comments you have written: 30</string>
     <string name="stat4">Success ratio: 85%</string>
+    <string name="project">Projects</string>
 </resources>

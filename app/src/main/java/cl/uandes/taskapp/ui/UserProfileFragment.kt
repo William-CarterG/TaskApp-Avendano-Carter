@@ -25,12 +25,27 @@ class UserProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         logoutAction()
+        goToTasks()
     }
 
     private fun logoutAction() {
         val logoutButton = binding.logoutButton
         logoutButton.setOnClickListener{
             findNavController().navigate(R.id.action_userProfileFragment_to_loginFragment)
+        }
+    }
+
+    private fun goToProjects() {
+        val projects = binding.myProjects
+        projects.setOnClickListener {
+            findNavController().navigate(R.id.action_userProfileFragment_to_homeProjectsFragment)
+        }
+    }
+
+    private fun goToTasks() {
+        val tasks = binding.myTasks
+        tasks.setOnClickListener {
+            findNavController().navigate(R.id.action_userProfileFragment_to_homeTasksFragment)
         }
     }
 }
