@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/profileProjectTextView"
-        android:layout_width="418dp"
+        android:layout_width="match_parent"
         android:layout_height="157dp"
         android:background="#673AB7"
         android:gravity="center"
