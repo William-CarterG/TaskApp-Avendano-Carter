@@ -26,6 +26,7 @@ class UserProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         logoutAction()
         goToTasks()
+        goToProjects()
     }
 
     private fun logoutAction() {
