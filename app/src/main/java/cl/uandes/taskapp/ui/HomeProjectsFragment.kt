@@ -9,6 +9,7 @@ import android.widget.Toast
 import android.util.Patterns
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
+import cl.uandes.taskapp.R
 
 class HomeProjectsFragment : Fragment() {
     private lateinit var binding: FragmentHomeProjectsBinding
@@ -28,6 +29,7 @@ class HomeProjectsFragment : Fragment() {
         createNewProject()
         viewProjectProfileExample()
         toTasksHome()
+        visitProfile()
     }
 
     private fun createNewProject(){
@@ -60,6 +62,13 @@ class HomeProjectsFragment : Fragment() {
         homeTasksButton.setOnClickListener {
             val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToHomeTasksFragment()
             findNavController().navigate(action)
+        }
+    }
+
+    private fun visitProfile () {
+        val profileButton = binding.profileButton
+        profileButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeProjectsFragment_to_userProfileFragment)
         }
     }
 }

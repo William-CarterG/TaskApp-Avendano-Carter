@@ -21,6 +21,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="83dp"
+        android:layout_height="38dp"
+        android:text="@string/profile"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="323dp" />
+
     <SearchView
         android:id="@+id/projectSearch"
         android:layout_width="349dp"
