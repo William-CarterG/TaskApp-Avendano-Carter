@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeTasksFragment">
+
+    <TextView
+        android:id="@+id/homeProjectsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:background="#008ECC"
+        android:gravity="center"
+        android:padding="20sp"
+        android:text="@string/home_tasks"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/projectSearch"
+        android:layout_width="399dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="108dp"
+        android:background="#F3F3F3"
+        android:backgroundTint="#ECECEC"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </SearchView>
+
+    <TextView
+        android:id="@+id/editProject1"
+        android:layout_width="399dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="232dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/Project1task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editProject2"
+        android:layout_width="398dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="284dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/Project2task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/taskProfileExampleButton"
+        android:layout_width="175dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="368dp"
+        android:text="@string/task_example"
+        android:backgroundTint="#9E50F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homeProjectsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:text="@string/home_projects"
+        android:backgroundTint="#9E50F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

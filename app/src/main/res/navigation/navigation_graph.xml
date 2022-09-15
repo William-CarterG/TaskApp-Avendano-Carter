@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="cl.uandes.taskapp.ui.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeProjects"
+            app:destination="@id/homeProjectsFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeProjectsFragment"
+        android:name="cl.uandes.taskapp.ui.HomeProjectsFragment"
+        android:label="fragment_home_projects"
+        tools:layout="@layout/fragment_home_projects" >
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_createProjectFragment"
+            app:destination="@id/createProjectFragment" />
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_homeTasksFragment"
+            app:destination="@id/homeTasksFragment" />
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProjectFragment"
+        android:name="cl.uandes.taskapp.ui.CreateProjectFragment"
+        android:label="fragment_create_project"
+        tools:layout="@layout/fragment_create_project" >
+        <action
+            android:id="@+id/action_createProjectFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectProfileFragment"
+        android:name="cl.uandes.taskapp.ui.ProjectProfileFragment"
+        android:label="fragment_project_profile"
+        tools:layout="@layout/fragment_project_profile" >
+        <action
+            android:id="@+id/action_projectProfileFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+        <action
+            android:id="@+id/action_projectProfileFragment_to_addMemberFragment"
+            app:destination="@id/addMemberFragment" />
+        <action
+            android:id="@+id/action_projectProfileFragment_to_viewProjectRequestFragment"
+            app:destination="@id/viewProjectRequestFragment" />
+        <action
+            android:id="@+id/action_projectProfileFragment_to_createTaskFragment"
+            app:destination="@id/createTaskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addMemberFragment"
+        android:name="cl.uandes.taskapp.ui.AddMemberFragment"
+        android:label="AddMemberFragment"
+        tools:layout="@layout/fragment_add_member">
+
+        <action
+            android:id="@+id/action_addMemberFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewProjectRequestFragment"
+        android:name="cl.uandes.taskapp.ui.ViewProjectRequestFragment"
+        android:label="fragment_view_project_request"
+        tools:layout="@layout/fragment_view_project_request" >
+        <action
+            android:id="@+id/action_viewProjectRequestFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeTasksFragment"
+        android:name="cl.uandes.taskapp.ui.HomeTasksFragment"
+        android:label="fragment_home_tasks"
+        tools:layout="@layout/fragment_home_tasks" >
+        <action
+            android:id="@+id/action_homeTasksFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+        <action
+            android:id="@+id/action_homeTasksFragment_to_taskProfileFragment"
+            app:destination="@id/taskProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="cl.uandes.taskapp.ui.CreateTaskFragment"
+        android:label="fragment_create_task"
+        tools:layout="@layout/fragment_create_task" >
+        <action
+            android:id="@+id/action_createTaskFragment_to_taskAddMemberFragment"
+            app:destination="@id/taskAddMemberFragment" />
+        <action
+            android:id="@+id/action_createTaskFragment_to_projectProfileFragment"
+            app:destination="@id/projectProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskProfileFragment"
+        android:name="cl.uandes.taskapp.ui.TaskProfileFragment"
+        android:label="fragment_task_profile"
+        tools:layout="@layout/fragment_task_profile" >
+        <action
+            android:id="@+id/action_taskProfileFragment_to_homeTasksFragment"
+            app:destination="@id/homeTasksFragment" />
+        <action
+            android:id="@+id/action_taskProfileFragment_to_taskAddMemberFragment"
+            app:destination="@id/taskAddMemberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskAddMemberFragment"
+        android:name="cl.uandes.taskapp.ui.TaskAddMemberFragment"
+        android:label="fragment_task_add_member"
+        tools:layout="@layout/fragment_task_add_member" >
+        <action
+            android:id="@+id/action_taskAddMemberFragment_to_taskProfileFragment"
+            app:destination="@id/taskProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="cl.uandes.taskapp.ui.view.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="cl.uandes.taskapp.ui.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_homeTasksFragment"
+            app:destination="@id/homeTasksFragment" />
+    </fragment>
+
+</navigation>
