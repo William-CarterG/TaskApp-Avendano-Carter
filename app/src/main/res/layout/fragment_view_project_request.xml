@@ -22,7 +22,7 @@
 
 
     <TextView
-        android:id="@+id/addParticipantsExample1TextView"
+        android:id="@+id/addParticipantsExampleWilliamTextView"
         android:layout_width="175dp"
         android:layout_height="54dp"
         android:layout_marginTop="208dp"

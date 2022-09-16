@@ -27,8 +27,10 @@
         android:layout_height="38dp"
         android:text="@string/profile"
         android:textSize="10sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="323dp" />
+        tools:layout_editor_absoluteX="323dp"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <SearchView
         android:id="@+id/projectSearch"
@@ -48,7 +50,7 @@
     </SearchView>
 
     <TextView
-        android:id="@+id/editProject1"
+        android:id="@+id/editProjectTaskApp"
         android:layout_width="404dp"
         android:layout_height="57dp"
         android:layout_marginTop="224dp"
@@ -60,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/editProject2"
+        android:id="@+id/editProjectBlogApp"
         android:layout_width="404dp"
         android:layout_height="57dp"
         android:layout_marginTop="280dp"
@@ -72,7 +74,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/editProject3"
+        android:id="@+id/editProjectHeroApp"
         android:layout_width="404dp"
         android:layout_height="57dp"
         android:layout_marginTop="336dp"

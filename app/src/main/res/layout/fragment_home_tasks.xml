@@ -39,7 +39,7 @@
     </SearchView>
 
     <TextView
-        android:id="@+id/editProject1"
+        android:id="@+id/editProjectTaskApp"
         android:layout_width="399dp"
         android:layout_height="52dp"
         android:layout_marginTop="232dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/editProject2"
+        android:id="@+id/editProjectBlogApp"
         android:layout_width="398dp"
         android:layout_height="49dp"
         android:layout_marginTop="284dp"
