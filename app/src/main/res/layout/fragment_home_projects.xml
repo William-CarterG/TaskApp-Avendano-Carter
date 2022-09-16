@@ -125,9 +125,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="656dp"
-        android:text="@string/tasks"
+        android:layout_marginTop="536dp"
         android:backgroundTint="#9E50F0"
+        android:text="@string/tasks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
