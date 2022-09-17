@@ -93,6 +93,9 @@
         <action
             android:id="@+id/action_homeTasksFragment_to_taskProfileFragment"
             app:destination="@id/taskProfileFragment" />
+        <action
+            android:id="@+id/action_homeTasksFragment_to_createTaskFragment"
+            app:destination="@id/createTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/createTaskFragment"
