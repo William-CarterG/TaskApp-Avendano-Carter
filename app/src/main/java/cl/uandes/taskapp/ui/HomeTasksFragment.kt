@@ -28,6 +28,7 @@ class HomeTasksFragment : Fragment() {
         toHomeProjects()
         toTaskProfileExample()
         toCreateTask()
+        toUserProfile()
     }
 
     private fun toHomeProjects(){
@@ -50,6 +51,13 @@ class HomeTasksFragment : Fragment() {
         val createTaskButton = binding.AddNewTaskButton
         createTaskButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeTasksFragment_to_createTaskFragment)
+        }
+    }
+
+    private fun toUserProfile() {
+        val profileButton = binding.profileButton
+        profileButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeTasksFragment_to_userProfileFragment)
         }
     }
 }
