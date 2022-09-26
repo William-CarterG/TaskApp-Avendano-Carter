@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/addParticipantsExample1TextView"
+        android:id="@+id/addParticipantsExampleWilliamTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="228dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/addParticipantsExample2TextView"
+        android:id="@+id/addParticipantsExamplePabloTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="396dp"
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/addParticipantsExample3TextView"
+        android:id="@+id/addParticipantsExampleMapiTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="308dp"
@@ -85,7 +85,7 @@
         android:id="@+id/leaveAddMembersButton"
         android:layout_width="78dp"
         android:layout_height="73dp"
-        android:layout_marginTop="656dp"
+        android:layout_marginTop="440dp"
         android:src="?attr/homeAsUpIndicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -22,7 +22,7 @@
 
 
     <TextView
-        android:id="@+id/addParticipantsExample1TextView"
+        android:id="@+id/addParticipantsExampleWilliamTextView"
         android:layout_width="175dp"
         android:layout_height="54dp"
         android:layout_marginTop="208dp"
@@ -48,7 +48,7 @@
         android:id="@+id/leaveAddMembersButton"
         android:layout_width="78dp"
         android:layout_height="73dp"
-        android:layout_marginTop="656dp"
+        android:layout_marginTop="508dp"
         android:src="?attr/homeAsUpIndicator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

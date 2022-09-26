@@ -23,12 +23,19 @@
 
     <Button
         android:id="@+id/profileButton"
-        android:layout_width="83dp"
-        android:layout_height="38dp"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/purple_500"
+        android:gravity="center"
         android:text="@string/profile"
-        android:textSize="10sp"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="323dp" />
+        app:layout_constraintVertical_bias="0.775"/>
 
     <SearchView
         android:id="@+id/projectSearch"
@@ -48,7 +55,7 @@
     </SearchView>
 
     <TextView
-        android:id="@+id/editProject1"
+        android:id="@+id/editProjectTaskApp"
         android:layout_width="404dp"
         android:layout_height="57dp"
         android:layout_marginTop="224dp"
@@ -60,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/editProject2"
+        android:id="@+id/editProjectBlogApp"
         android:layout_width="404dp"
         android:layout_height="57dp"
         android:layout_marginTop="280dp"
@@ -72,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/editProject3"
+        android:id="@+id/editProjectHeroApp"
         android:layout_width="404dp"
         android:layout_height="57dp"
         android:layout_marginTop="336dp"
@@ -106,7 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/filetrByDateButton"
+        android:id="@+id/filterByDateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
@@ -123,9 +130,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="656dp"
-        android:text="@string/tasks"
+        android:layout_marginTop="536dp"
         android:backgroundTint="#9E50F0"
+        android:text="@string/tasks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
