@@ -50,7 +50,7 @@ class HomeProjectsFragment : Fragment() {
     }
 
     private fun filterProjectsByDate(){
-        val filterProjectsByDateButton = binding.filetrByDateButton
+        val filterProjectsByDateButton = binding.filterByDateButton
         filterProjectsByDateButton.setOnClickListener {
             //TODO: Logic of filtering the projects by date
             //...
