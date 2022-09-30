@@ -43,6 +43,7 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         filterProjectsByDate()
         createNewProject()
         toTasksHome()
+        goToUserProfile()
     }
 
     private fun createNewProject(){
@@ -81,5 +82,10 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)
     }
 
-
+    private fun goToUserProfile() {
+        val userProfileButton = binding.profileButton
+        userProfileButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homeProjectsFragment_to_userProfileFragment)
+        }
+    }
 }
