@@ -10,16 +10,23 @@ import android.util.Patterns
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
+import cl.uandes.taskapp.data.model.Project
+import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 
 
-class HomeProjectsFragment : Fragment() {
+
+class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
     private lateinit var binding: FragmentHomeProjectsBinding
+    private lateinit var projectItemAdapter: ProjectItemAdapter
+    private var allProjects = InMemoryDataSource.projects
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        projectItemAdapter = ProjectItemAdapter(allProjects, this)
         binding = FragmentHomeProjectsBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -29,12 +36,13 @@ class HomeProjectsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val homeProjectsListView = binding.recyclerViewHomeProjects
-        
+        homeProjectsListView.layoutManager = LinearLayoutManager(context)
+        homeProjectsListView.adapter = projectItemAdapter
+
         filterProjectsByDate()
         createNewProject()
         viewProjectProfileExample()
         toTasksHome()
-        visitProfile()
     }
 
     private fun createNewProject(){
@@ -70,10 +78,10 @@ class HomeProjectsFragment : Fragment() {
         }
     }
 
-    private fun visitProfile () {
-        val profileButton = binding.profileButton
-        profileButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeProjectsFragment_to_userProfileFragment)
-        }
+    override fun goToProjectDetails(project: Project) {
+        val bundle = bundleOf("projectTitle" to project.title)
+        findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)
     }
+
+
 }

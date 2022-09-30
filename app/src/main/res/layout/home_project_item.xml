@@ -1,74 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:id="@+id/catItem"
-    android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/projectTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="44dp"
-        android:layout_weight="1"
-        android:text="@string/new_project_title"
-        android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/projectDescriptionTextView"
-        android:layout_width="99dp"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:text="@string/new_project_description"
-        android:textSize="18sp" />
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/projectItem"
+        android:layout_width="417dp"
+        android:layout_height="445dp"
+        android:orientation="vertical"
+        android:padding="12dp">
 
-    <TextView
-        android:id="@+id/projectAdminTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/project_admin"
-        android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/projectParticipantsTextView"
-        android:layout_width="177dp"
-        android:layout_height="43dp"
-        android:layout_weight="1"
-        android:text="@string/project_participants"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/projectCreationDateText"
-        android:layout_width="177dp"
-        android:layout_height="43dp"
-        android:layout_weight="1"
-        android:text="@string/project_creation_date"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/projectDeadlineTextView"
-        android:layout_width="177dp"
-        android:layout_height="43dp"
-        android:layout_weight="1"
-        android:text="@string/project_deadline"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/projectPercentageTextView"
-        android:layout_width="177dp"
-        android:layout_height="43dp"
-        android:layout_weight="1"
-        android:text="@string/project_percentage"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/projectStatusTextView"
-        android:layout_width="177dp"
-        android:layout_height="43dp"
-        android:layout_weight="1"
-        android:text="@string/project_status"
-        android:textSize="18sp" />
-
-</LinearLayout>
+        <TextView
+            android:id="@+id/projectTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="@string/new_project_title"
+            android:textSize="18sp" />
+    </LinearLayout>

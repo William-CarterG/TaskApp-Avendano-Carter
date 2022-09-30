@@ -32,10 +32,10 @@
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toEndOf="@+id/homeTasksButton"
         app:layout_constraintTop_toBottomOf="@+id/projectProfileExampleButton"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.671" />
 
     <SearchView
         android:id="@+id/projectSearch"
@@ -56,14 +56,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHomeProjects"
-        android:layout_width="434dp"
-        android:layout_height="471dp"
+        android:layout_width="301dp"
+        android:layout_height="419dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintVertical_bias="0.73" />
 
     <ImageButton
         android:id="@+id/AddNewProjectButton"
@@ -80,7 +80,7 @@
         android:id="@+id/projectProfileExampleButton"
         android:layout_width="175dp"
         android:layout_height="87dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="540dp"
         android:backgroundTint="#9E50F0"
         android:text="@string/project_example"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,12 +104,12 @@
         android:id="@+id/homeTasksButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="28dp"
         android:backgroundTint="#9E50F0"
         android:text="@string/tasks"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/projectProfileExampleButton"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintVertical_bias="0.62" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
