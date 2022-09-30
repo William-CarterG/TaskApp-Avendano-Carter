@@ -177,6 +177,10 @@
         <argument
             android:name="taskDeadline"
             app:argType="string" />
+
+        <argument
+            android:name="taskStatus"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/taskAddMemberFragment"
