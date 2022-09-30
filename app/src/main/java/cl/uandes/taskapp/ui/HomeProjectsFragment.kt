@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
 import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.uandes.taskapp.data.model.Project
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
@@ -71,7 +72,12 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
     }
 
     override fun goToProjectDetails(project: Project) {
-        val bundle = bundleOf("projectTitle" to project.title)
+        //Here you write all of the args to do the navigation properly.
+        val bundle = bundleOf("projectTitle" to project.title,
+            "projectDescription" to project.description, "projectAdmin" to project.admin,
+            "projectParticipants" to project.participant, "projectCreationDate" to project.creationDate,
+            "projectDeadline" to project.deadline, "projectPercentage" to project.percentageCompletion,
+            "projectStatus" to project.status)
         findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)
     }
 

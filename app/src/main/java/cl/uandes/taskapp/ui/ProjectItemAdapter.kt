@@ -32,12 +32,11 @@ class ProjectItemAdapter(
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     val project: Project = projects[position]
 
+    //Here goes only whatever args you wanna show in the recycler view
     val detailsButton = holder.projectItem
-
     val title = holder.projectTitle
 
     title.text = project.title
-
 
     detailsButton.setOnClickListener {
       actionListener.goToProjectDetails(project)

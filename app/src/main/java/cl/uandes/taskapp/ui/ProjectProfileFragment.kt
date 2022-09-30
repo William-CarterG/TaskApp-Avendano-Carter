@@ -7,12 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import android.util.Patterns
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import cl.uandes.taskapp.data.model.Project
 import cl.uandes.taskapp.databinding.FragmentProjectProfileBinding
-import androidx.navigation.fragment.findNavController
+import cl.uandes.taskapp.R
 
 class ProjectProfileFragment : Fragment() {
     private lateinit var binding: FragmentProjectProfileBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,42 @@ class ProjectProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //Added for safe args navigation
+        val projectTitle = arguments?.getString("projectTitle")
+        val title = view.findViewById<TextView>(R.id.projectTitleTextView)
+        title.text = projectTitle
+
+        val projectDescription = arguments?.getString("projectDescription")
+        val description = view.findViewById<TextView>(R.id.projectDescriptionTextView)
+        description.text = projectDescription
+
+        val projectAdmin = arguments?.getString("projectAdmin")
+        val admin = view.findViewById<TextView>(R.id.projectAdminTextView)
+        admin.text = projectAdmin
+
+        val projectParticipants = arguments?.getString("projectParticipants")
+        val participants = view.findViewById<TextView>(R.id.projectParticipantsTextView)
+        participants.text = projectParticipants
+
+        val projectCreationDate = arguments?.getString("projectCreationDate")
+        val creationDate = view.findViewById<TextView>(R.id.projectCreationDateTextView)
+        creationDate.text = projectCreationDate
+
+        val projectDeadline = arguments?.getString("projectDeadline")
+        val deadline = view.findViewById<TextView>(R.id.projectDeadlineTextView)
+        deadline.text = projectDeadline
+
+        val projectPercentage = arguments?.getString("projectPercentage")
+        val percentage = view.findViewById<TextView>(R.id.projectPercentageTextView) //consider changing the variable name to a more descriptive one
+        percentage.text = projectPercentage
+
+        val projectStatus = arguments?.getString("projectStatus")
+        val status = view.findViewById<TextView>(R.id.projectStatusTextView)
+        status.text = projectStatus
+
+
+        //Navigation functions
         returnToHomeProjects()
         addMembers()
         viewPendingRequests()
