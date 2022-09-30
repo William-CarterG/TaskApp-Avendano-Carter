@@ -49,40 +49,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
-    <TextView
-        android:id="@+id/editProjectTaskApp"
-        android:layout_width="399dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="232dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/Project1task"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHomeTasks"
+        android:layout_width="203dp"
+        android:layout_height="274dp"
+        app:layout_constraintBottom_toTopOf="@+id/homeProjectsButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/editProjectBlogApp"
-        android:layout_width="398dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="284dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/Project2task"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/taskProfileExampleButton"
-        android:layout_width="175dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="372dp"
-        android:backgroundTint="#9E50F0"
-        android:text="@string/task_example"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/projectSearch"
+        app:layout_constraintVertical_bias="0.472" />
 
     <Button
         android:id="@+id/homeProjectsButton"

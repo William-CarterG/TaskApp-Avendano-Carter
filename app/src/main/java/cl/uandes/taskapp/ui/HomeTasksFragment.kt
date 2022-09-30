@@ -25,6 +25,8 @@ class HomeTasksFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val homeTasksListView = binding.recyclerViewHomeTasks
         toHomeProjects()
         toTaskProfileExample()
         toCreateTask()
