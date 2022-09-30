@@ -184,8 +184,8 @@
         android:label="fragment_task_add_member"
         tools:layout="@layout/fragment_task_add_member" >
         <action
-            android:id="@+id/action_taskAddMemberFragment_to_taskProfileFragment"
-            app:destination="@id/taskProfileFragment" />
+            android:id="@+id/action_taskAddMemberFragment_to_homeTasksFragment"
+            app:destination="@id/homeTasksFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
