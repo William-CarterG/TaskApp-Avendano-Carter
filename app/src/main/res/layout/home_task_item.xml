@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/taskTitleTextView"
         android:layout_width="151dp"
-        android:layout_height="375dp"
+        android:layout_height="wrap_content"
         android:text="@string/new_task_title" />
 
 </LinearLayout>
