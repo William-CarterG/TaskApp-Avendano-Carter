@@ -6,5 +6,6 @@ data class Task (
     val description: String,
     val taskCreator: String,
     val comment: String,
-    val deadline: String
+    val deadline: String,
+    val status: String
         )

@@ -19,14 +19,16 @@ object InMemoryDataSource {
             "Proyecto 1",
             "Julio Cortés",
             "You have to add the tasks menu to the fragment.",
-            "08/09/2022"
+            "08/09/2022",
+            "Successful"
         ),
         Task(2,
             "Implement navigation",
             "Blog App",
             "María Pía Sánchez",
             "Add navigation's actions.",
-            "13/09/2022"
+            "13/09/2022",
+            "In progress"
         )
     )
     val projects = mutableListOf<Project>(
