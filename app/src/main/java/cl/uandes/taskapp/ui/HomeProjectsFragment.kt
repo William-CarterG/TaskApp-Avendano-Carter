@@ -41,7 +41,6 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
 
         filterProjectsByDate()
         createNewProject()
-        viewProjectProfileExample()
         toTasksHome()
     }
 
@@ -54,13 +53,6 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         }
     }
 
-    private fun viewProjectProfileExample(){
-        val projectProfileExampleButton = binding.projectProfileExampleButton
-        projectProfileExampleButton.setOnClickListener {
-            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToProjectProfileFragment()
-            findNavController().navigate(action)
-        }
-    }
 
     private fun filterProjectsByDate(){
         val filterProjectsByDateButton = binding.filterByDateButton
