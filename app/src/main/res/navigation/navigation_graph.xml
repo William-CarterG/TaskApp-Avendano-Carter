@@ -157,6 +157,26 @@
         <action
             android:id="@+id/action_taskProfileFragment_to_taskAddMemberFragment"
             app:destination="@id/taskAddMemberFragment" />
+
+        <argument
+            android:name="taskTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="taskDescription"
+            app:argType="string" />
+
+        <argument
+            android:name="taskCreator"
+            app:argType="string" />
+
+        <argument
+            android:name="taskComment"
+            app:argType="string" />
+
+        <argument
+            android:name="taskDeadline"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/taskAddMemberFragment"
