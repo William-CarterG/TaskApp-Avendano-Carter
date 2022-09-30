@@ -10,6 +10,8 @@ import android.util.Patterns
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
+import androidx.recyclerview.widget.LinearLayoutManager
+
 
 class HomeProjectsFragment : Fragment() {
     private lateinit var binding: FragmentHomeProjectsBinding
@@ -25,6 +27,9 @@ class HomeProjectsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val homeProjectsListView = binding.recyclerViewHomeProjects
+        
         filterProjectsByDate()
         createNewProject()
         viewProjectProfileExample()
