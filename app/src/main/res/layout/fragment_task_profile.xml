@@ -8,7 +8,7 @@
     tools:context=".ui.TaskProfileFragment">
 
     <TextView
-        android:id="@+id/profileTaskTextView"
+        android:id="@+id/taskTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#008ECC"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/profileTaskDescriptionTextView"
+        android:id="@+id/taskDescriptionTextView"
         android:layout_width="378dp"
         android:layout_height="70dp"
         android:layout_marginTop="176dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/creationDateTextView"
+        android:id="@+id/taskDeadlineTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="268dp"
@@ -98,7 +98,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/taskDeadlineTextView"
+        android:id="@+id/taskCommentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -139,14 +139,5 @@
         android:text="@string/task_status"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Switch
-        android:id="@+id/statusSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="504dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
