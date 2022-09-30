@@ -1,6 +1,6 @@
 package cl.uandes.taskapp.data.model
 
-data class Project (
+data class Project(
     var id: Long?,
     val title: String,
     val description: String,
@@ -10,4 +10,4 @@ data class Project (
     val deadline: String,
     val percentageCompletion: String,
     val status: String
-        )
+)

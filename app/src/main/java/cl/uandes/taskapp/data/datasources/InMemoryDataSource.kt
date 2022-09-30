@@ -4,12 +4,15 @@ import cl.uandes.taskapp.data.model.Project
 import cl.uandes.taskapp.data.model.Task
 import cl.uandes.taskapp.data.model.User
 
+
 object InMemoryDataSource {
-    val users = mutableListOf(
+
+    val users = mutableListOf<User>(
         User(1, "hola@chao.cl", "123456", "teamlead"),
-        User(2, "chao@hola.com", "123456", "user")
+        User(2, "chao@hola.com", "123456", "user"),
+        User(3, "wgcarter@miuandes.cl", "123", "user")
     )
-    val tasks = mutableListOf(
+    val tasks = mutableListOf<Task>(
         Task(
             1,
             "Add tasks menu",
@@ -18,8 +21,7 @@ object InMemoryDataSource {
             "You have to add the tasks menu to the fragment.",
             "08/09/2022"
         ),
-        Task(
-            2,
+        Task(2,
             "Implement navigation",
             "Blog App",
             "María Pía Sánchez",
@@ -27,7 +29,7 @@ object InMemoryDataSource {
             "13/09/2022"
         )
     )
-    val projects = mutableListOf(
+    val projects = mutableListOf<Project>(
         Project(
             1,
             "Task App",
