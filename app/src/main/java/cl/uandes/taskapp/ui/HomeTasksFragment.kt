@@ -65,7 +65,7 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
 
     override fun goToTaskDetails(task: Task) {
         val bundle = bundleOf("taskTitle" to task.title, "taskDescription" to task.description,
-        "taskCreator" to task.taskCreator, "taskComment" to task.comment, "taskDeadline" to task.deadline)
+        "taskCreator" to task.taskCreator, "taskComment" to task.comment, "taskDeadline" to task.deadline, "taskStatus" to task.status)
         findNavController().navigate(R.id.action_homeTasksFragment_to_taskProfileFragment, bundle)
     }
 }

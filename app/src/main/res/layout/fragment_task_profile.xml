@@ -34,8 +34,9 @@
 
     <TextView
         android:id="@+id/taskDescriptionTextView"
-        android:layout_width="394dp"
-        android:layout_height="40dp"
+        android:layout_width="78dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="176dp"
         android:text="@string/task_profile_description"
         android:textColor="@color/black"
@@ -46,20 +47,20 @@
         android:id="@+id/taskDescriptionTextView2"
         android:layout_width="314dp"
         android:layout_height="29dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="176dp"
         android:text="@string/task_profile_description"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/taskDescriptionTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/taskParticipantsExampleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="296dp"
         android:text="@string/task_participants_example"
-        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,22 +68,21 @@
         android:id="@+id/taskParticipantsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="264dp"
         android:text="@string/task_participants"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintBottom_toTopOf="@+id/taskParticipantsExampleTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/creationDateExampleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="396dp"
         android:text="@string/project_creation_date_example"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/taskCommentExampleTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -92,7 +92,7 @@
         android:layout_marginStart="268dp"
         android:layout_marginTop="364dp"
         android:text="@string/task_deadline"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintBottom_toTopOf="@+id/creationDateExampleTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,9 +101,8 @@
         android:layout_width="223dp"
         android:layout_height="88dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="380dp"
         android:text="@string/task_comments_example"
-        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,10 +110,11 @@
         android:id="@+id/taskCommentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="356dp"
         android:text="@string/task_comments_title"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintEnd_toStartOf="@+id/taskCommentExampleTextView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -133,10 +133,10 @@
         android:id="@+id/taskCreatorTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="224dp"
         android:text="@string/task_creator"
         android:textColor="@color/black"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -155,10 +155,20 @@
         android:id="@+id/taskStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="512dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="508dp"
         android:text="@string/task_status"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taskStatusTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="508dp"
+        android:text="@string/task_status"
+        app:layout_constraintStart_toEndOf="@+id/taskStatusTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

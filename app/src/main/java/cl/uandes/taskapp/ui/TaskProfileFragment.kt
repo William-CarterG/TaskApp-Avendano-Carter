@@ -49,6 +49,10 @@ class TaskProfileFragment : Fragment() {
         val deadline = view.findViewById<TextView>(R.id.creationDateExampleTextView)
         deadline.text = taskDeadline
 
+        val taskStatus = arguments?.getString("taskStatus")
+        val status = view.findViewById<TextView>(R.id.taskStatusTextView2)
+        status.text = taskStatus
+
         returnToHomeTasks()
         addMembers()
     }
