@@ -45,8 +45,8 @@
     <string name="Project2task">Proyecto 2: Blog App: Implement navigation ; Assigned by María Pía Sanchez</string>
     <string name="task_example">See task profile example</string>
     <string name="task_profile_title">Task 4: Example Task</string>
-    <string name="task_profile_description"><b>Description:</b> Here you\'ll be able to see whatever description your task has.</string>
-    <string name="task_creator"><b>Task Creator:</b>Julio Cortés</string>
+    <string name="task_profile_description">Description:</string>
+    <string name="task_creator">Task Creator:</string>
     <string name="task_participants"><u><b>Task participants:</b></u></string>
     <string name="task_participants_example">William Carter, Developer</string>
     <string name="task_comments_title"><u><b>Comments:</b></u></string>
