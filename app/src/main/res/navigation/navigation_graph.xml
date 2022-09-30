@@ -34,6 +34,7 @@
         <action
             android:id="@+id/action_homeProjectsFragment_to_userProfileFragment"
             app:destination="@id/userProfileFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/createProjectFragment"
@@ -61,6 +62,39 @@
         <action
             android:id="@+id/action_projectProfileFragment_to_createTaskFragment"
             app:destination="@id/createTaskFragment" />
+
+        <argument
+            android:name="projectTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="projectDescription"
+            app:argType="string" />
+
+        <argument
+            android:name="projectAdmin"
+            app:argType="string" />
+
+        <argument
+            android:name="projectParticipants"
+            app:argType="string" />
+
+        <argument
+            android:name="projectCreationDate"
+            app:argType="string" />
+
+        <argument
+            android:name="projectDeadline"
+            app:argType="string" />
+
+        <argument
+            android:name="projectPercentage"
+            app:argType="string" />
+
+        <argument
+            android:name="projectStatus"
+            app:argType="string" />
+
     </fragment>
 
     <fragment
@@ -70,8 +104,8 @@
         tools:layout="@layout/fragment_add_member">
 
         <action
-            android:id="@+id/action_addMemberFragment_to_projectProfileFragment"
-            app:destination="@id/projectProfileFragment" />
+            android:id="@+id/action_addMemberFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewProjectRequestFragment"
