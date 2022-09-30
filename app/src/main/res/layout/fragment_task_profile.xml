@@ -34,14 +34,24 @@
 
     <TextView
         android:id="@+id/taskDescriptionTextView"
-        android:layout_width="378dp"
-        android:layout_height="70dp"
+        android:layout_width="394dp"
+        android:layout_height="40dp"
         android:layout_marginTop="176dp"
         android:text="@string/task_profile_description"
-        app:layout_constraintHorizontal_bias="0.484"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taskDescriptionTextView2"
+        android:layout_width="314dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="176dp"
+        android:text="@string/task_profile_description"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/taskParticipantsExampleTextView"
@@ -87,7 +97,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/taskDeadlineExampleTextView"
+        android:id="@+id/taskCommentExampleTextView"
         android:layout_width="223dp"
         android:layout_height="88dp"
         android:layout_marginStart="8dp"
@@ -131,6 +141,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/taskCreatorTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="224dp"
+        android:text="@string/task_creator"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/taskCreatorTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/taskStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -139,5 +160,5 @@
         android:text="@string/task_status"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>

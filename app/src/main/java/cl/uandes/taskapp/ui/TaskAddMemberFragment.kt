@@ -37,7 +37,7 @@ class TaskAddMemberFragment  : Fragment() {
     private fun returnToTaskProfile(){
         val leaveAddMembersButton = binding.leaveTaskAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            val action = TaskAddMemberFragmentDirections.actionTaskAddMemberFragmentToTaskProfileFragment()
+            val action = TaskAddMemberFragmentDirections.actionTaskAddMemberFragmentToHomeTasksFragment()
             findNavController().navigate(action)
         }
     }
