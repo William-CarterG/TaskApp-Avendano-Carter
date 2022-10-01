@@ -24,7 +24,6 @@
         android:id="@+id/imageView"
         android:layout_width="330dp"
         android:layout_height="297dp"
-        android:layout_marginTop="24dp"
         android:src="@drawable/ic_baseline_person_pin_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,11 +77,13 @@
         android:layout_width="114dp"
         android:layout_height="42dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="68dp"
         android:backgroundTint="#FF6961"
         android:text="@string/logout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintStart_toEndOf="@+id/myTasks" />
 
     <Button
         android:id="@+id/myProjects"
