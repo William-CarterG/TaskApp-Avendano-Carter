@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/homeProjectsFragment"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        android:title="Projects" />
+    <item
+        android:id="@+id/homeTasksFragment"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="Tasks" />
+    <item
+        android:id="@+id/userProfileFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile" />
+
+
+</menu>
