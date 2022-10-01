@@ -29,10 +29,10 @@
         android:id="@+id/leaveProjectProfileButton"
         android:layout_width="78dp"
         android:layout_height="73dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="436dp"
         android:src="?attr/homeAsUpIndicator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView" />
 
@@ -163,11 +163,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+
+        android:layout_marginTop="340dp"
         android:text="@string/project_percentage_holder"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/projectPercentageText"
-        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView" />
 
     <Button
         android:id="@+id/addParticipantsButton"
@@ -185,7 +185,7 @@
         android:id="@+id/acceptParticipantsButton"
         android:layout_width="125dp"
         android:layout_height="77dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="432dp"
         android:backgroundTint="@color/green"
         android:text="@string/view_participants_requests"
         app:layout_constraintEnd_toEndOf="parent"
@@ -232,23 +232,24 @@
         android:id="@+id/projectStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+
+        android:layout_marginTop="392dp"
         android:text="@string/project_status_holder"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/projectStatusText"
-        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView"
-        app:layout_constraintVertical_bias="0.723" />
+        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView" />
 
     <Button
         android:id="@+id/addTaskButton"
         android:layout_width="116dp"
         android:layout_height="74dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="432dp"
         android:text="@string/add_tasks"
         app:layout_constraintEnd_toStartOf="@+id/acceptParticipantsButton"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/leaveProjectProfileButton"
         app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView" />
 
