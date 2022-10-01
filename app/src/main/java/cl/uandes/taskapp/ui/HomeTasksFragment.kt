@@ -41,6 +41,13 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         toUserProfile()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        //TODO: Implement a SaveInstanceState to save projects extracted from a DB (eventually).
+        //Should make the app more efficient not having to request the data constantly
+        //...
+    }
+
     private fun toHomeProjects(){
         val homeProjectsButton = binding.homeProjectsButton
         homeProjectsButton.setOnClickListener {
