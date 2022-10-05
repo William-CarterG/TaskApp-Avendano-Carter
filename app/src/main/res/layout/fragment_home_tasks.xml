@@ -49,67 +49,42 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
-    <TextView
-        android:id="@+id/editProjectTaskApp"
-        android:layout_width="399dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="232dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/Project1task"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHomeTasks"
+        android:layout_width="203dp"
+        android:layout_height="274dp"
+        app:layout_constraintBottom_toTopOf="@+id/homeProjectsButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/editProjectBlogApp"
-        android:layout_width="398dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="284dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/Project2task"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/taskProfileExampleButton"
-        android:layout_width="175dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="372dp"
-        android:backgroundTint="#9E50F0"
-        android:text="@string/task_example"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/projectSearch"
+        app:layout_constraintVertical_bias="0.142" />
 
     <Button
         android:id="@+id/homeProjectsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="528dp"
+        android:layout_width="116dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#9E50F0"
         android:text="@string/home_projects"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/profileButton"
-        android:layout_width="117dp"
-        android:layout_height="40dp"
+        android:layout_width="134dp"
+        android:layout_height="49dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/purple_500"
         android:gravity="center"
         android:text="@string/profile"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.775"/>
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toEndOf="@+id/homeProjectsButton"
+        app:layout_constraintVertical_bias="0.671" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

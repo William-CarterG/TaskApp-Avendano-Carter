@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import android.util.Patterns
+import android.widget.TextView
+import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentTaskProfileBinding
+import cl.uandes.taskapp.R
 
 class TaskProfileFragment : Fragment() {
     private lateinit var binding: FragmentTaskProfileBinding
@@ -24,6 +27,32 @@ class TaskProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //safeargs
+        val taskTitle = arguments?.getString("taskTitle")
+        val title = view.findViewById<TextView>(R.id.taskTitleTextView)
+        title.text = taskTitle
+
+        val taskDescription = arguments?.getString("taskDescription")
+        val description = view.findViewById<TextView>(R.id.taskDescriptionTextView2)
+        description.text = taskDescription
+
+        val taskTaskCreator = arguments?.getString("taskCreator")
+        val taskCreator = view.findViewById<TextView>(R.id.taskCreatorTextView2)
+        taskCreator.text = taskTaskCreator
+
+        val taskComment = arguments?.getString("taskComment")
+        val comment = view.findViewById<TextView>(R.id.taskCommentExampleTextView)
+        comment.text = taskComment
+
+        val taskDeadline = arguments?.getString("taskDeadline")
+        val deadline = view.findViewById<TextView>(R.id.creationDateExampleTextView)
+        deadline.text = taskDeadline
+
+        val taskStatus = arguments?.getString("taskStatus")
+        val status = view.findViewById<TextView>(R.id.taskStatusTextView2)
+        status.text = taskStatus
+
         returnToHomeTasks()
         addMembers()
     }

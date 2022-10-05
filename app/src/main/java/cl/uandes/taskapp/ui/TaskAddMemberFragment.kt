@@ -26,6 +26,12 @@ class TaskAddMemberFragment  : Fragment() {
         returnToTaskProfile()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        //TODO: Save changes into DB
+        //...
+    }
+
     private fun addMemberToTask(){
         val addMemberButton = binding.taskAddExampleButton
         addMemberButton.setOnClickListener {
@@ -37,7 +43,7 @@ class TaskAddMemberFragment  : Fragment() {
     private fun returnToTaskProfile(){
         val leaveAddMembersButton = binding.leaveTaskAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            val action = TaskAddMemberFragmentDirections.actionTaskAddMemberFragmentToTaskProfileFragment()
+            val action = TaskAddMemberFragmentDirections.actionTaskAddMemberFragmentToHomeTasksFragment()
             findNavController().navigate(action)
         }
     }

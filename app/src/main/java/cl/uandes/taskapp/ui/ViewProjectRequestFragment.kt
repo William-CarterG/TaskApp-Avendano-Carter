@@ -37,7 +37,7 @@ class ViewProjectRequestFragment : Fragment() {
     private fun returnToHomeProjects(){
         val leaveAddMembersButton = binding.leaveAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            val action = ViewProjectRequestFragmentDirections.actionViewProjectRequestFragmentToProjectProfileFragment()
+            val action = ViewProjectRequestFragmentDirections.actionViewProjectRequestFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }

@@ -27,11 +27,20 @@ class CreateTaskFragment : Fragment() {
 
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        //TODO: Save changes into DB
+        //...
+    }
+
+
     private fun returnToProject(){
         val returnToProjectsButton = binding.returnToProjectsButton
 
         returnToProjectsButton.setOnClickListener {
-            val action = CreateTaskFragmentDirections.actionCreateTaskFragmentToProjectProfileFragment()
+            //TODO Moving forward, consider passing the project to this fragment
+            // so we can easily create a new task into the project.
+            val action = CreateTaskFragmentDirections.actionCreateTaskFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }

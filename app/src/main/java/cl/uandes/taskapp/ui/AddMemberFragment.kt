@@ -26,6 +26,13 @@ class AddMemberFragment : Fragment() {
         returnToHomeProjects()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        //TODO: Save changes into DB
+        //...
+    }
+
+
     private fun addMemberToProject(){
         val addMemberButton = binding.addExampleButton
         addMemberButton.setOnClickListener {
@@ -37,7 +44,7 @@ class AddMemberFragment : Fragment() {
     private fun returnToHomeProjects(){
         val leaveAddMembersButton = binding.leaveAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            val action = AddMemberFragmentDirections.actionAddMemberFragmentToProjectProfileFragment()
+            val action = AddMemberFragmentDirections.actionAddMemberFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }

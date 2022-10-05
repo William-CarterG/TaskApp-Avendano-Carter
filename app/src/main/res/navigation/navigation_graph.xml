@@ -34,6 +34,7 @@
         <action
             android:id="@+id/action_homeProjectsFragment_to_userProfileFragment"
             app:destination="@id/userProfileFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/createProjectFragment"
@@ -61,6 +62,39 @@
         <action
             android:id="@+id/action_projectProfileFragment_to_createTaskFragment"
             app:destination="@id/createTaskFragment" />
+
+        <argument
+            android:name="projectTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="projectDescription"
+            app:argType="string" />
+
+        <argument
+            android:name="projectAdmin"
+            app:argType="string" />
+
+        <argument
+            android:name="projectParticipants"
+            app:argType="string" />
+
+        <argument
+            android:name="projectCreationDate"
+            app:argType="string" />
+
+        <argument
+            android:name="projectDeadline"
+            app:argType="string" />
+
+        <argument
+            android:name="projectPercentage"
+            app:argType="string" />
+
+        <argument
+            android:name="projectStatus"
+            app:argType="string" />
+
     </fragment>
 
     <fragment
@@ -70,8 +104,8 @@
         tools:layout="@layout/fragment_add_member">
 
         <action
-            android:id="@+id/action_addMemberFragment_to_projectProfileFragment"
-            app:destination="@id/projectProfileFragment" />
+            android:id="@+id/action_addMemberFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewProjectRequestFragment"
@@ -79,8 +113,8 @@
         android:label="fragment_view_project_request"
         tools:layout="@layout/fragment_view_project_request" >
         <action
-            android:id="@+id/action_viewProjectRequestFragment_to_projectProfileFragment"
-            app:destination="@id/projectProfileFragment" />
+            android:id="@+id/action_viewProjectRequestFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeTasksFragment"
@@ -109,8 +143,8 @@
             android:id="@+id/action_createTaskFragment_to_taskAddMemberFragment"
             app:destination="@id/taskAddMemberFragment" />
         <action
-            android:id="@+id/action_createTaskFragment_to_projectProfileFragment"
-            app:destination="@id/projectProfileFragment" />
+            android:id="@+id/action_createTaskFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
     </fragment>
     <fragment
         android:id="@+id/taskProfileFragment"
@@ -123,6 +157,30 @@
         <action
             android:id="@+id/action_taskProfileFragment_to_taskAddMemberFragment"
             app:destination="@id/taskAddMemberFragment" />
+
+        <argument
+            android:name="taskTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="taskDescription"
+            app:argType="string" />
+
+        <argument
+            android:name="taskCreator"
+            app:argType="string" />
+
+        <argument
+            android:name="taskComment"
+            app:argType="string" />
+
+        <argument
+            android:name="taskDeadline"
+            app:argType="string" />
+
+        <argument
+            android:name="taskStatus"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/taskAddMemberFragment"
@@ -130,8 +188,8 @@
         android:label="fragment_task_add_member"
         tools:layout="@layout/fragment_task_add_member" >
         <action
-            android:id="@+id/action_taskAddMemberFragment_to_taskProfileFragment"
-            app:destination="@id/taskProfileFragment" />
+            android:id="@+id/action_taskAddMemberFragment_to_homeTasksFragment"
+            app:destination="@id/homeTasksFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
