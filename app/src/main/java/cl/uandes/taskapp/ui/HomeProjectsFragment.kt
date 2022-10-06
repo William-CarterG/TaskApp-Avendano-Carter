@@ -23,11 +23,14 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
     private lateinit var projectItemAdapter: ProjectItemAdapter
     private var allProjects = InMemoryDataSource.projects
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        projectItemAdapter = ProjectItemAdapter(allProjects, this)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        projectItemAdapter = ProjectItemAdapter(allProjects, this)
         binding = FragmentHomeProjectsBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root

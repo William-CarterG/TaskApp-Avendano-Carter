@@ -18,12 +18,14 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
     private lateinit var taskItemAdapter: TaskItemAdapter
     private var allTasks = InMemoryDataSource.tasks
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        taskItemAdapter = TaskItemAdapter(allTasks,this)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        taskItemAdapter = TaskItemAdapter(allTasks,this)
         binding = FragmentHomeTasksBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
