@@ -36,9 +36,7 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         homeTasksListView.layoutManager = LinearLayoutManager(context)
         homeTasksListView.adapter = taskItemAdapter
 
-        toHomeProjects()
         toCreateTask()
-        toUserProfile()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -48,25 +46,11 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         //...
     }
 
-    private fun toHomeProjects(){
-        val homeProjectsButton = binding.homeProjectsButton
-        homeProjectsButton.setOnClickListener {
-            val action = HomeTasksFragmentDirections.actionHomeTasksFragmentToHomeProjectsFragment()
-            findNavController().navigate(action)
-        }
-    }
 
     private fun toCreateTask() {
         val createTaskButton = binding.AddNewTaskButton
         createTaskButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeTasksFragment_to_createTaskFragment)
-        }
-    }
-
-    private fun toUserProfile() {
-        val profileButton = binding.profileButton
-        profileButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeTasksFragment_to_userProfileFragment)
         }
     }
 

@@ -42,8 +42,6 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
 
         filterProjectsByDate()
         createNewProject()
-        toTasksHome()
-        goToUserProfile()
     }
 
 
@@ -73,14 +71,6 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         }
     }
 
-    private fun toTasksHome(){
-        val homeTasksButton = binding.homeTasksButton
-        homeTasksButton.setOnClickListener {
-            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToHomeTasksFragment()
-            findNavController().navigate(action)
-        }
-    }
-
     override fun goToProjectDetails(project: Project) {
         //Here you write all of the args to do the navigation properly.
         val bundle = bundleOf("projectTitle" to project.title,
@@ -89,12 +79,5 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
             "projectDeadline" to project.deadline, "projectPercentage" to project.percentageCompletion,
             "projectStatus" to project.status)
         findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)
-    }
-
-    private fun goToUserProfile() {
-        val userProfileButton = binding.profileButton
-        userProfileButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeProjectsFragment_to_userProfileFragment)
-        }
     }
 }
