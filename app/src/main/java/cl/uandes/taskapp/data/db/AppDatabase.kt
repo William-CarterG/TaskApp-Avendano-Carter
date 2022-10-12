@@ -4,10 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import cl.uandes.taskapp.data.db.dao.ProjectDao
 import cl.uandes.taskapp.data.db.entity.Project
+import cl.uandes.taskapp.data.db.dao.ProjectDao
+
 import cl.uandes.taskapp.data.db.entity.Task
+import cl.uandes.taskapp.data.db.dao.TaskDao
+
 import cl.uandes.taskapp.data.db.entity.User
+import cl.uandes.taskapp.data.db.dao.UserDao
+
+
 
 
 @Database(
@@ -17,7 +23,9 @@ import cl.uandes.taskapp.data.db.entity.User
 )
 
 abstract class AppDatabase: RoomDatabase() {
-    abstract fun getNoteDao(): ProjectDao
+    abstract fun getProjectDao(): ProjectDao
+    abstract fun getTaskDao(): TaskDao
+    abstract fun getUserDao(): UserDao
 
     companion object {
         private const val DB_NAME = "taskapp_database.db"
