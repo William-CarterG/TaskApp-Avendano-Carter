@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="cl.uandes.taskapp.ui.view.LoginFragment"
+        android:name="cl.uandes.taskapp.ui.Login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/homeProjectsFragment"
-        android:name="cl.uandes.taskapp.ui.HomeProjectsFragment"
+        android:name="cl.uandes.taskapp.ui.HomeProjects.HomeProjectsFragment"
         android:label="fragment_home_projects"
         tools:layout="@layout/fragment_home_projects" >
         <action
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/createProjectFragment"
-        android:name="cl.uandes.taskapp.ui.CreateProjectFragment"
+        android:name="cl.uandes.taskapp.ui.CreateProject.CreateProjectFragment"
         android:label="fragment_create_project"
         tools:layout="@layout/fragment_create_project" >
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/projectProfileFragment"
-        android:name="cl.uandes.taskapp.ui.ProjectProfileFragment"
+        android:name="cl.uandes.taskapp.ui.ProjectProfile.ProjectProfileFragment"
         android:label="fragment_project_profile"
         tools:layout="@layout/fragment_project_profile" >
         <action
@@ -99,7 +99,7 @@
 
     <fragment
         android:id="@+id/addMemberFragment"
-        android:name="cl.uandes.taskapp.ui.AddMemberFragment"
+        android:name="cl.uandes.taskapp.ui.ProjectAddMember.AddMemberFragment"
         android:label="AddMemberFragment"
         tools:layout="@layout/fragment_add_member">
 
@@ -109,7 +109,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewProjectRequestFragment"
-        android:name="cl.uandes.taskapp.ui.ViewProjectRequestFragment"
+        android:name="cl.uandes.taskapp.ui.ViewProjectRequest.ViewProjectRequestFragment"
         android:label="fragment_view_project_request"
         tools:layout="@layout/fragment_view_project_request" >
         <action
@@ -118,7 +118,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeTasksFragment"
-        android:name="cl.uandes.taskapp.ui.HomeTasksFragment"
+        android:name="cl.uandes.taskapp.ui.HomeTasks.HomeTasksFragment"
         android:label="fragment_home_tasks"
         tools:layout="@layout/fragment_home_tasks" >
         <action
@@ -136,7 +136,7 @@
     </fragment>
     <fragment
         android:id="@+id/createTaskFragment"
-        android:name="cl.uandes.taskapp.ui.CreateTaskFragment"
+        android:name="cl.uandes.taskapp.ui.CreateTasks.CreateTaskFragment"
         android:label="fragment_create_task"
         tools:layout="@layout/fragment_create_task" >
         <action
@@ -148,7 +148,7 @@
     </fragment>
     <fragment
         android:id="@+id/taskProfileFragment"
-        android:name="cl.uandes.taskapp.ui.TaskProfileFragment"
+        android:name="cl.uandes.taskapp.ui.TaskProfile.TaskProfileFragment"
         android:label="fragment_task_profile"
         tools:layout="@layout/fragment_task_profile" >
         <action
@@ -184,7 +184,7 @@
     </fragment>
     <fragment
         android:id="@+id/taskAddMemberFragment"
-        android:name="cl.uandes.taskapp.ui.TaskAddMemberFragment"
+        android:name="cl.uandes.taskapp.ui.TaskAddMember.TaskAddMemberFragment"
         android:label="fragment_task_add_member"
         tools:layout="@layout/fragment_task_add_member" >
         <action
@@ -193,7 +193,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="cl.uandes.taskapp.ui.view.RegisterFragment"
+        android:name="cl.uandes.taskapp.ui.Register.RegisterFragment"
         android:label="RegisterFragment" >
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
@@ -201,7 +201,7 @@
     </fragment>
     <fragment
         android:id="@+id/userProfileFragment"
-        android:name="cl.uandes.taskapp.ui.UserProfileFragment"
+        android:name="cl.uandes.taskapp.ui.UserProfile.UserProfileFragment"
         android:label="fragment_user_profile"
         tools:layout="@layout/fragment_user_profile" >
         <action

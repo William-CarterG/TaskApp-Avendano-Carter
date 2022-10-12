@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeTasksFragment">
+    tools:context=".ui.HomeTasks.HomeTasksFragment">
 
     <TextView
         android:id="@+id/homeProjectsTextView"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
+    <android.widget.SearchView
         android:id="@+id/projectSearch"
         android:layout_width="339dp"
         android:layout_height="55dp"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </SearchView>
+    </android.widget.SearchView>
 
     <ImageButton
         android:id="@+id/AddNewTaskButton"

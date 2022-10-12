@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeProjectsFragment">
+    tools:context=".ui.HomeProjects.HomeProjectsFragment">
 
 
     <TextView
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <SearchView
+    <android.widget.SearchView
         android:id="@+id/projectSearch"
         android:layout_width="349dp"
         android:layout_height="50dp"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-    </SearchView>
+    </android.widget.SearchView>
 
 
     <androidx.recyclerview.widget.RecyclerView
