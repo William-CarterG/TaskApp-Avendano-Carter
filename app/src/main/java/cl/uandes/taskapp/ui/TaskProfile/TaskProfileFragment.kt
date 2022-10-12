@@ -1,14 +1,11 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.TaskProfile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import android.util.Patterns
 import android.widget.TextView
-import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentTaskProfileBinding
 import cl.uandes.taskapp.R
@@ -62,7 +59,8 @@ class TaskProfileFragment : Fragment() {
         val leaveTaskProfileButton = binding.leaveTaskProfileButton
 
         leaveTaskProfileButton.setOnClickListener {
-            val action = TaskProfileFragmentDirections.actionTaskProfileFragmentToHomeTasksFragment()
+            val action =
+                cl.uandes.taskapp.ui.TaskProfile.TaskProfileFragmentDirections.actionTaskProfileFragmentToHomeTasksFragment()
             findNavController().navigate(action)
         }
 
@@ -72,7 +70,8 @@ class TaskProfileFragment : Fragment() {
     private fun addMembers(){
         val addParticipantsButton = binding.addParticipantsButton
         addParticipantsButton.setOnClickListener {
-            val action = TaskProfileFragmentDirections.actionTaskProfileFragmentToTaskAddMemberFragment()
+            val action =
+                cl.uandes.taskapp.ui.TaskProfile.TaskProfileFragmentDirections.actionTaskProfileFragmentToTaskAddMemberFragment()
             findNavController().navigate(action)
 
         }

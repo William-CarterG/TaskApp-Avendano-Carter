@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.HomeTasks
 
 import android.view.LayoutInflater
 import android.view.View

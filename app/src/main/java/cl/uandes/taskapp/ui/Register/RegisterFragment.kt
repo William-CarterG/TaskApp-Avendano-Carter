@@ -1,17 +1,14 @@
-package cl.uandes.taskapp.ui.view
+package cl.uandes.taskapp.ui.Register
 
 import android.os.Bundle
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import cl.uandes.taskapp.R
 import cl.uandes.taskapp.databinding.FragmentRegisterBinding
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 import cl.uandes.taskapp.data.model.User
 

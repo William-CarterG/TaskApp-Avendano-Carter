@@ -1,24 +1,20 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.HomeProjects
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import android.util.Patterns
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
 import androidx.core.os.bundleOf
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.uandes.taskapp.data.model.Project
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 
 
-
-class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
+class HomeProjectsFragment : Fragment(), ProjectItemAdapter.ActionListener {
     private lateinit var binding: FragmentHomeProjectsBinding
     private lateinit var projectItemAdapter: ProjectItemAdapter
     private var allProjects = InMemoryDataSource.projects
@@ -60,7 +56,8 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         val createNewProjectButton = binding.AddNewProjectButton
 
         createNewProjectButton.setOnClickListener {
-            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToCreateProjectFragment()
+            val action =
+                cl.uandes.taskapp.ui.HomeProjects.HomeProjectsFragmentDirections.actionHomeProjectsFragmentToCreateProjectFragment()
             findNavController().navigate(action)
         }
     }

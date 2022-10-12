@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.ProjectAddMember
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -38,7 +38,8 @@ class AddMemberFragment : Fragment() {
     private fun returnToHomeProjects(){
         val leaveAddMembersButton = binding.leaveAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            val action = AddMemberFragmentDirections.actionAddMemberFragmentToHomeProjectsFragment()
+            val action =
+                cl.uandes.taskapp.ui.ProjectAddMember.AddMemberFragmentDirections.actionAddMemberFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }

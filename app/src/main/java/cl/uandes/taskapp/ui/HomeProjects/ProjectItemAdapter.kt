@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.HomeProjects
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cl.uandes.taskapp.R
 import cl.uandes.taskapp.data.model.Project
-
-import org.w3c.dom.Text
 
 class ProjectItemAdapter(
   private val projects: MutableList<Project>,

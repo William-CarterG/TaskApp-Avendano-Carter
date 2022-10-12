@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.UserProfile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
