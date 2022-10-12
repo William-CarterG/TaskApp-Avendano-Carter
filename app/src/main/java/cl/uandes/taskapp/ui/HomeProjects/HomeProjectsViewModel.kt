@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
-import cl.uandes.taskapp.data.model.Project
+import cl.uandes.taskapp.data.db.entity.Project
 import kotlinx.coroutines.launch
 
 class HomeProjectsViewModel: ViewModel() {

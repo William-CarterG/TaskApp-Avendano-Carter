@@ -10,7 +10,7 @@ import cl.uandes.taskapp.R
 import cl.uandes.taskapp.databinding.FragmentRegisterBinding
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
-import cl.uandes.taskapp.data.model.User
+import cl.uandes.taskapp.data.db.entity.User
 
 class RegisterFragment : Fragment() {
 

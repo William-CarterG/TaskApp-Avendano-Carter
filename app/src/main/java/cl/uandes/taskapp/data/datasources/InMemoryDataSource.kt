@@ -1,8 +1,8 @@
 package cl.uandes.taskapp.data.datasources
 
-import cl.uandes.taskapp.data.model.Project
-import cl.uandes.taskapp.data.model.Task
-import cl.uandes.taskapp.data.model.User
+import cl.uandes.taskapp.data.db.entity.Project
+import cl.uandes.taskapp.data.db.entity.Task
+import cl.uandes.taskapp.data.db.entity.User
 
 
 object InMemoryDataSource {
@@ -20,6 +20,7 @@ object InMemoryDataSource {
             "Julio Cortés",
             "You have to add the tasks menu to the fragment.",
             "08/09/2022",
+            "08/08/2022",
             "Successful"
         ),
         Task(2,
@@ -28,6 +29,7 @@ object InMemoryDataSource {
             "María Pía Sánchez",
             "Add navigation's actions.",
             "13/09/2022",
+            "01/09/2022",
             "In progress"
         )
     )

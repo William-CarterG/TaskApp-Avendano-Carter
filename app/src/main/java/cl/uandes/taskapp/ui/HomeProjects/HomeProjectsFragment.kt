@@ -10,12 +10,10 @@ import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
-import cl.uandes.taskapp.data.model.Project
+import cl.uandes.taskapp.data.db.entity.Project
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 
 import androidx.lifecycle.ViewModelProvider
-import androidx.databinding.DataBindingUtil
-
 
 
 class HomeProjectsFragment : Fragment(), ProjectItemAdapter.ActionListener {

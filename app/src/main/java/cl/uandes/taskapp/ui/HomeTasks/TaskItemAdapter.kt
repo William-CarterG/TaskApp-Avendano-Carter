@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cl.uandes.taskapp.R
-import cl.uandes.taskapp.data.model.Task
+import cl.uandes.taskapp.data.db.entity.Task
 
 class TaskItemAdapter (
     private val tasks: MutableList<Task>,

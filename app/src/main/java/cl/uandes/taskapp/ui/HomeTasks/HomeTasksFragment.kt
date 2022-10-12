@@ -10,7 +10,7 @@ import cl.uandes.taskapp.databinding.FragmentHomeTasksBinding
 import cl.uandes.taskapp.R
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
-import cl.uandes.taskapp.data.model.Task
+import cl.uandes.taskapp.data.db.entity.Task
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 
 class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
