@@ -29,10 +29,10 @@
         android:id="@+id/leaveProjectProfileButton"
         android:layout_width="78dp"
         android:layout_height="73dp"
-        android:layout_marginTop="436dp"
+        android:layout_marginTop="412dp"
         android:src="?attr/homeAsUpIndicator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView" />
 
@@ -185,7 +185,7 @@
         android:id="@+id/acceptParticipantsButton"
         android:layout_width="125dp"
         android:layout_height="77dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="316dp"
         android:backgroundTint="@color/green"
         android:text="@string/view_participants_requests"
         app:layout_constraintEnd_toEndOf="parent"
@@ -221,7 +221,7 @@
         android:id="@+id/projectStatusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:text="@string/project_status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.037"
@@ -234,7 +234,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
 
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="376dp"
         android:text="@string/project_status_holder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -246,11 +246,11 @@
         android:layout_width="116dp"
         android:layout_height="74dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="16dp"
         android:text="@string/add_tasks"
         app:layout_constraintEnd_toStartOf="@+id/acceptParticipantsButton"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/leaveProjectProfileButton"
-        app:layout_constraintTop_toBottomOf="@+id/projectTitleTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/acceptParticipantsButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

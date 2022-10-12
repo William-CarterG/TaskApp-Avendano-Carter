@@ -26,12 +26,6 @@ class AddMemberFragment : Fragment() {
         returnToHomeProjects()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //TODO: Save changes into DB
-        //...
-    }
-
 
     private fun addMemberToProject(){
         val addMemberButton = binding.addExampleButton

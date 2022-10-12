@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeProjectsFragment">
 
+
     <TextView
         android:id="@+id/homeProjectsTextView"
         android:layout_width="match_parent"
@@ -21,21 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/profileButton"
-        android:layout_width="134dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/purple_500"
-        android:gravity="center"
-        android:text="@string/profile"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.775"
-        app:layout_constraintStart_toEndOf="@+id/homeTasksButton"
-        app:layout_constraintVertical_bias="0.671" />
 
     <SearchView
         android:id="@+id/projectSearch"
@@ -54,6 +40,7 @@
 
     </SearchView>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHomeProjects"
         android:layout_width="299dp"
@@ -64,6 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/projectSearch"
         app:layout_constraintVertical_bias="0.198" />
+
 
     <ImageButton
         android:id="@+id/AddNewProjectButton"
@@ -88,15 +76,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/projectSearch" />
 
-    <Button
-        android:id="@+id/homeTasksButton"
-        android:layout_width="100dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#9E50F0"
-        android:text="@string/tasks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,12 +26,6 @@ class TaskAddMemberFragment  : Fragment() {
         returnToTaskProfile()
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //TODO: Save changes into DB
-        //...
-    }
-
     private fun addMemberToTask(){
         val addMemberButton = binding.taskAddExampleButton
         addMemberButton.setOnClickListener {

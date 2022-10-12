@@ -7,6 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import cl.uandes.taskapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.view.View
+import androidx.navigation.Navigation
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,11 +28,17 @@ class MainActivity : AppCompatActivity() {
     Toast.makeText(this, "onStart MainActivity", Toast.LENGTH_SHORT).show()
     super.onStart()
 
-    /*TODO: Implement BottomNavBar
+
     navController= Navigation.findNavController(this,R.id.nav_host_fragment_container)
+
     val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
-    setupWithNavController(bottomNavigationView, navController)
+    val appBarConfiguration = AppBarConfiguration(setOf(
+      R.id.homeProjectsFragment, R.id.homeTasksFragment, R.id.userProfileFragment))
+
+    setupActionBarWithNavController(navController, appBarConfiguration)
+
+    bottomNavigationView.setupWithNavController(navController)
 
     navController.addOnDestinationChangedListener { _, destination, _ ->
       bottomNavigationView.visibility = if(destination.id == R.id.loginFragment) {
@@ -35,17 +47,7 @@ class MainActivity : AppCompatActivity() {
         View.VISIBLE
       }
     }
-    */
 
-    //TODO: Connect to DB
-    //...
   }
 
-  override fun onDestroy() {
-    super.onDestroy()
-    Toast.makeText(this, "onDestroy Activity2", Toast.LENGTH_SHORT).show()
-
-    //TODO: Disconnect from DB
-    //...
-  }
 }

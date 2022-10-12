@@ -18,12 +18,14 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
     private lateinit var taskItemAdapter: TaskItemAdapter
     private var allTasks = InMemoryDataSource.tasks
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        taskItemAdapter = TaskItemAdapter(allTasks,this)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        taskItemAdapter = TaskItemAdapter(allTasks,this)
         binding = FragmentHomeTasksBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -36,9 +38,7 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         homeTasksListView.layoutManager = LinearLayoutManager(context)
         homeTasksListView.adapter = taskItemAdapter
 
-        toHomeProjects()
         toCreateTask()
-        toUserProfile()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -48,25 +48,11 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         //...
     }
 
-    private fun toHomeProjects(){
-        val homeProjectsButton = binding.homeProjectsButton
-        homeProjectsButton.setOnClickListener {
-            val action = HomeTasksFragmentDirections.actionHomeTasksFragmentToHomeProjectsFragment()
-            findNavController().navigate(action)
-        }
-    }
 
     private fun toCreateTask() {
         val createTaskButton = binding.AddNewTaskButton
         createTaskButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeTasksFragment_to_createTaskFragment)
-        }
-    }
-
-    private fun toUserProfile() {
-        val profileButton = binding.profileButton
-        profileButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeTasksFragment_to_userProfileFragment)
         }
     }
 

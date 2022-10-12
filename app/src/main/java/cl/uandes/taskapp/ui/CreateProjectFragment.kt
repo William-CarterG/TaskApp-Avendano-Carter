@@ -28,13 +28,6 @@ class CreateProjectFragment : Fragment() {
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        //TODO: Save changes into DB
-        //...
-    }
-
-
     private fun returnToProjects(){
         val returnToProjectsButton = binding.returnToProjectsButton
 
