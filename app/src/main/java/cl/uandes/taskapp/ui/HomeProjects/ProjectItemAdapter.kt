@@ -1,5 +1,6 @@
 package cl.uandes.taskapp.ui.HomeProjects
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -42,6 +43,14 @@ class ProjectItemAdapter(
   }
   override fun getItemCount(): Int {
     return projects.size
+  }
+
+  @SuppressLint("NotifyDataSetChanged")
+  fun updateProjects(newProjectList: MutableList<Project>) {
+    projects.clear()
+    projects.addAll(newProjectList)
+
+    notifyDataSetChanged()
   }
 
   interface ActionListener {
