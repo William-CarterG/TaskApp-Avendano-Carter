@@ -91,6 +91,7 @@
             android:name="projectPercentage"
             app:argType="string" />
 
+
         <argument
             android:name="projectStatus"
             app:argType="string" />
@@ -158,6 +159,7 @@
             android:id="@+id/action_taskProfileFragment_to_taskAddMemberFragment"
             app:destination="@id/taskAddMemberFragment" />
 
+
         <argument
             android:name="taskTitle"
             app:argType="string" />
@@ -176,6 +178,10 @@
 
         <argument
             android:name="taskDeadline"
+            app:argType="string" />
+
+        <argument
+            android:name="taskCreationDate"
             app:argType="string" />
 
         <argument

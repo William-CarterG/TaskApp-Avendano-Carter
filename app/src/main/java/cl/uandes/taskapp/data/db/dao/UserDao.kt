@@ -5,7 +5,7 @@ import androidx.room.*
 import cl.uandes.taskapp.data.db.entity.User
 
 
-
+/*
 @Dao
 interface UserDao {
 
@@ -29,3 +29,5 @@ interface UserDao {
     @Query("DELETE FROM user_table WHERE id = :id") //you can use this too, for delete note by id.
     suspend fun deleteUserById(id: Int)
 }
+*/
+ 

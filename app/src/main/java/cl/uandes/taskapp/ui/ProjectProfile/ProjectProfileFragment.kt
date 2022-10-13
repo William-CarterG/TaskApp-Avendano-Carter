@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentProjectProfileBinding
 import cl.uandes.taskapp.R
@@ -14,17 +15,29 @@ class ProjectProfileFragment : Fragment() {
     private lateinit var binding: FragmentProjectProfileBinding
 
 
+    //Implementing View Model
+    //private lateinit var viewModel: ProjectProfileViewModel
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentProjectProfileBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
+
+
+        //View model
+        //viewModel = ViewModelProvider(this)[ProjectProfileViewModel::class.java]
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
 
         //Added for safe args navigation
         val projectTitle = arguments?.getString("projectTitle")
@@ -58,6 +71,8 @@ class ProjectProfileFragment : Fragment() {
         val projectStatus = arguments?.getString("projectStatus")
         val status = view.findViewById<TextView>(R.id.projectStatusTextView)
         status.text = projectStatus
+
+
 
 
         //Navigation functions

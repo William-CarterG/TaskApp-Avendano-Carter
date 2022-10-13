@@ -1,5 +1,6 @@
 package cl.uandes.taskapp.data.repository
 
+/*
 import androidx.lifecycle.LiveData
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.entity.Task
@@ -20,3 +21,5 @@ class TaskRepository(
 
     fun getAllTasks(): LiveData<List<Task>> = taskDatabase.getTaskDao().getAllTasks()
 }
+
+ */

@@ -112,7 +112,7 @@ class HomeProjectsFragment : Fragment(), ProjectItemAdapter.ActionListener {
         //Here you write all of the args to do the navigation properly.
         val bundle = bundleOf("projectTitle" to project.title,
             "projectDescription" to project.description, "projectAdmin" to project.admin,
-            "projectParticipants" to project.participant, "projectCreationDate" to project.creationDate,
+            "projectParticdipants" to project.participant, "projectCreationDate" to project.creationDate,
             "projectDeadline" to project.deadline, "projectPercentage" to project.percentageCompletion,
             "projectStatus" to project.status)
         findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)

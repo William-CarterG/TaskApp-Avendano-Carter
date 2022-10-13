@@ -5,6 +5,7 @@ import androidx.room.*
 import cl.uandes.taskapp.data.db.entity.Project
 
 
+/*
 
 @Dao
 interface ProjectDao {
@@ -29,3 +30,4 @@ interface ProjectDao {
     @Query("DELETE FROM project_table WHERE id = :id") //you can use this too, for delete note by id.
     suspend fun deleteProjectById(id: Int)
 }
+*/

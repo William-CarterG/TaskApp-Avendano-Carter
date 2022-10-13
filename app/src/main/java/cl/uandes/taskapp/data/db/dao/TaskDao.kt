@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import cl.uandes.taskapp.data.db.entity.Task
 
-
-
+/*
 @Dao
 interface TaskDao {
 
@@ -27,3 +26,4 @@ interface TaskDao {
     @Query("DELETE FROM task_table WHERE id = :id")
     suspend fun deleteTaskById(id: Int)
 }
+*/

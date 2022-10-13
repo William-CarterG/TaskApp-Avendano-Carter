@@ -7,9 +7,8 @@ import kotlinx.android.parcel.Parcelize
 
 
 @Entity(tableName = "project_table")
-@Parcelize
 data class Project(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = false)
     var id: Long?,
 
     val title: String,
@@ -20,4 +19,4 @@ data class Project(
     val deadline: String,
     val percentageCompletion: String,
     val status: String
-) : Parcelable
+)

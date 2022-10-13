@@ -40,7 +40,7 @@ class RegisterFragment : Fragment() {
                 Toast.makeText(context,"User already exists.", Toast.LENGTH_LONG).show()
 
             } else {
-                InMemoryDataSource.users.add(User(InMemoryDataSource.users.size.toLong(),emailEntered,passEntered,roleEntered))
+                InMemoryDataSource.users.add(User(InMemoryDataSource.users.size.toLong(), emailEntered, passEntered, roleEntered))
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
         }
