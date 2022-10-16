@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.TaskAddMember
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,38 +6,39 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import cl.uandes.taskapp.databinding.FragmentViewProjectRequestBinding
+import cl.uandes.taskapp.databinding.FragmentTaskAddMemberBinding
 
-class ViewProjectRequestFragment : Fragment() {
-    private lateinit var binding: FragmentViewProjectRequestBinding
+class TaskAddMemberFragment  : Fragment() {
+    private lateinit var binding: FragmentTaskAddMemberBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentViewProjectRequestBinding.inflate(inflater, container, false)
+        binding = FragmentTaskAddMemberBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        addMemberToProject()
-        returnToHomeProjects()
+        addMemberToTask()
+        returnToTaskProfile()
     }
 
-    private fun addMemberToProject(){
-        val addMemberButton = binding.addExampleButton
+    private fun addMemberToTask(){
+        val addMemberButton = binding.taskAddExampleButton
         addMemberButton.setOnClickListener {
             //TODO: Logic of adding a new member to project
             //...
         }
     }
 
-    private fun returnToHomeProjects(){
-        val leaveAddMembersButton = binding.leaveAddMembersButton
+    private fun returnToTaskProfile(){
+        val leaveAddMembersButton = binding.leaveTaskAddMembersButton
         leaveAddMembersButton.setOnClickListener {
-            val action = ViewProjectRequestFragmentDirections.actionViewProjectRequestFragmentToHomeProjectsFragment()
+            val action =
+                cl.uandes.taskapp.ui.TaskAddMember.TaskAddMemberFragmentDirections.actionTaskAddMemberFragmentToHomeTasksFragment()
             findNavController().navigate(action)
         }
     }

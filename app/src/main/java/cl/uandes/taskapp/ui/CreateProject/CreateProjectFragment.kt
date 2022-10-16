@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.CreateProject
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -32,7 +32,8 @@ class CreateProjectFragment : Fragment() {
         val returnToProjectsButton = binding.returnToProjectsButton
 
         returnToProjectsButton.setOnClickListener {
-            val action = CreateProjectFragmentDirections.actionCreateProjectFragmentToHomeProjectsFragment()
+            val action =
+                cl.uandes.taskapp.ui.CreateProject.CreateProjectFragmentDirections.actionCreateProjectFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }
@@ -45,7 +46,8 @@ class CreateProjectFragment : Fragment() {
             //...
 
 
-            val action = CreateProjectFragmentDirections.actionCreateProjectFragmentToHomeProjectsFragment()
+            val action =
+                cl.uandes.taskapp.ui.CreateProject.CreateProjectFragmentDirections.actionCreateProjectFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }

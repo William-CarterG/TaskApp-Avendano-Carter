@@ -1,52 +1,85 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.HomeProjects
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import android.util.Patterns
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
 import androidx.core.os.bundleOf
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import cl.uandes.taskapp.data.model.Project
+import cl.uandes.taskapp.data.db.entity.Project
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 
+import androidx.lifecycle.ViewModelProvider
 
 
-class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
+class HomeProjectsFragment : Fragment(), ProjectItemAdapter.ActionListener {
     private lateinit var binding: FragmentHomeProjectsBinding
     private lateinit var projectItemAdapter: ProjectItemAdapter
     private var allProjects = InMemoryDataSource.projects
+
+    //View model implementation
+    private lateinit var viewModel: HomeProjectsViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         projectItemAdapter = ProjectItemAdapter(allProjects, this)
     }
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        //Previous implementation
         binding = FragmentHomeProjectsBinding.inflate(inflater, container, false)
-        // Inflate the layout for this fragment
+
+        /*
+        //View Model implementation
+        binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_home_projects, container, false)
+        */
+
+        viewModel = ViewModelProvider(this)[HomeProjectsViewModel::class.java]
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.loadProjects()
+        projectItemAdapter = ProjectItemAdapter(mutableListOf(), this)
+
+        /*
         val homeProjectsListView = binding.recyclerViewHomeProjects
         homeProjectsListView.layoutManager = LinearLayoutManager(context)
         homeProjectsListView.adapter = projectItemAdapter
+        */
+
+        binding.recyclerViewHomeProjects.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = projectItemAdapter
+        }
+
+        //TODO Implement subscription to live data
+        observeProjectList()
 
         filterProjectsByDate()
         createNewProject()
     }
 
+    private  fun observeProjectList() {
+        viewModel.projectListLiveData.observe(viewLifecycleOwner) { projects ->
+            projects?.let {
+                binding.recyclerViewHomeProjects.visibility = View.VISIBLE
+                projectItemAdapter.updateProjects(projects)
+            }
+        }
+    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -60,7 +93,8 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         val createNewProjectButton = binding.AddNewProjectButton
 
         createNewProjectButton.setOnClickListener {
-            val action = HomeProjectsFragmentDirections.actionHomeProjectsFragmentToCreateProjectFragment()
+            val action =
+                cl.uandes.taskapp.ui.HomeProjects.HomeProjectsFragmentDirections.actionHomeProjectsFragmentToCreateProjectFragment()
             findNavController().navigate(action)
         }
     }
@@ -78,7 +112,7 @@ class HomeProjectsFragment : Fragment(),  ProjectItemAdapter.ActionListener {
         //Here you write all of the args to do the navigation properly.
         val bundle = bundleOf("projectTitle" to project.title,
             "projectDescription" to project.description, "projectAdmin" to project.admin,
-            "projectParticipants" to project.participant, "projectCreationDate" to project.creationDate,
+            "projectParticdipants" to project.participant, "projectCreationDate" to project.creationDate,
             "projectDeadline" to project.deadline, "projectPercentage" to project.percentageCompletion,
             "projectStatus" to project.status)
         findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)

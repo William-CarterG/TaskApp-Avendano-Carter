@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui.view
+package cl.uandes.taskapp.ui.Login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,6 +14,7 @@ import cl.uandes.taskapp.R
 class LoginFragment : Fragment() {
 
     private lateinit var binding: FragmentLoginBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +46,8 @@ class LoginFragment : Fragment() {
             if (passwordEntered == "123456" && email) {
 
                 //If credentials are okay, enter the HomeProjects view, where you can see all your projects
-                val action = LoginFragmentDirections.actionLoginFragmentToHomeProjects()
+                val action =
+                    cl.uandes.taskapp.ui.Login.LoginFragmentDirections.actionLoginFragmentToHomeProjects()
                 findNavController().navigate(action)
 
             }

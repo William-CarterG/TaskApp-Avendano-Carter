@@ -1,19 +1,16 @@
-package cl.uandes.taskapp.ui.view
+package cl.uandes.taskapp.ui.Register
 
 import android.os.Bundle
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import cl.uandes.taskapp.R
 import cl.uandes.taskapp.databinding.FragmentRegisterBinding
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
-import cl.uandes.taskapp.data.model.User
+import cl.uandes.taskapp.data.db.entity.User
 
 class RegisterFragment : Fragment() {
 
@@ -43,7 +40,7 @@ class RegisterFragment : Fragment() {
                 Toast.makeText(context,"User already exists.", Toast.LENGTH_LONG).show()
 
             } else {
-                InMemoryDataSource.users.add(User(InMemoryDataSource.users.size.toLong(),emailEntered,passEntered,roleEntered))
+                InMemoryDataSource.users.add(User(InMemoryDataSource.users.size.toLong(), emailEntered, passEntered, roleEntered))
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
         }

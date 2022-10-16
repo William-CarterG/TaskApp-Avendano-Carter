@@ -1,20 +1,22 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.ProjectProfile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import android.util.Patterns
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import cl.uandes.taskapp.data.model.Project
 import cl.uandes.taskapp.databinding.FragmentProjectProfileBinding
 import cl.uandes.taskapp.R
 
 class ProjectProfileFragment : Fragment() {
     private lateinit var binding: FragmentProjectProfileBinding
+
+
+    //Implementing View Model
+    //private lateinit var viewModel: ProjectProfileViewModel
 
 
     override fun onCreateView(
@@ -23,11 +25,19 @@ class ProjectProfileFragment : Fragment() {
     ): View {
         binding = FragmentProjectProfileBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
+
+
+        //View model
+        //viewModel = ViewModelProvider(this)[ProjectProfileViewModel::class.java]
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
 
         //Added for safe args navigation
         val projectTitle = arguments?.getString("projectTitle")
@@ -63,6 +73,8 @@ class ProjectProfileFragment : Fragment() {
         status.text = projectStatus
 
 
+
+
         //Navigation functions
         returnToHomeProjects()
         addMembers()
@@ -74,7 +86,8 @@ class ProjectProfileFragment : Fragment() {
         val leaveProjectProfileButton = binding.leaveProjectProfileButton
 
         leaveProjectProfileButton.setOnClickListener {
-            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToHomeProjectsFragment()
+            val action =
+                cl.uandes.taskapp.ui.ProjectProfile.ProjectProfileFragmentDirections.actionProjectProfileFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }
@@ -82,7 +95,8 @@ class ProjectProfileFragment : Fragment() {
     private fun addMembers(){
         val addParticipantsButton = binding.addParticipantsButton
         addParticipantsButton.setOnClickListener {
-            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToAddMemberFragment()
+            val action =
+                cl.uandes.taskapp.ui.ProjectProfile.ProjectProfileFragmentDirections.actionProjectProfileFragmentToAddMemberFragment()
             findNavController().navigate(action)
 
         }
@@ -91,7 +105,8 @@ class ProjectProfileFragment : Fragment() {
     private fun viewPendingRequests(){
         val viewPendingRequestsButton = binding.acceptParticipantsButton
         viewPendingRequestsButton.setOnClickListener {
-            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToViewProjectRequestFragment()
+            val action =
+                cl.uandes.taskapp.ui.ProjectProfile.ProjectProfileFragmentDirections.actionProjectProfileFragmentToViewProjectRequestFragment()
             findNavController().navigate(action)
         }
     }
@@ -99,7 +114,8 @@ class ProjectProfileFragment : Fragment() {
     private fun addTask(){
         val addTaskButton = binding.addTaskButton
         addTaskButton.setOnClickListener {
-            val action = ProjectProfileFragmentDirections.actionProjectProfileFragmentToCreateTaskFragment()
+            val action =
+                cl.uandes.taskapp.ui.ProjectProfile.ProjectProfileFragmentDirections.actionProjectProfileFragmentToCreateTaskFragment()
             findNavController().navigate(action)
         }
     }

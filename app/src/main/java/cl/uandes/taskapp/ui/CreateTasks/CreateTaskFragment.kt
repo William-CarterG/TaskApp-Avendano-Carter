@@ -1,4 +1,4 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.CreateTasks
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -33,7 +33,8 @@ class CreateTaskFragment : Fragment() {
         returnToProjectsButton.setOnClickListener {
             //TODO Moving forward, consider passing the project to this fragment
             // so we can easily create a new task into the project.
-            val action = CreateTaskFragmentDirections.actionCreateTaskFragmentToHomeProjectsFragment()
+            val action =
+                cl.uandes.taskapp.ui.CreateTasks.CreateTaskFragmentDirections.actionCreateTaskFragmentToHomeProjectsFragment()
             findNavController().navigate(action)
         }
     }
@@ -42,7 +43,8 @@ class CreateTaskFragment : Fragment() {
         val createNewTaskButton = binding.createNewTaskButton
 
         createNewTaskButton.setOnClickListener {
-            val action = CreateTaskFragmentDirections.actionCreateTaskFragmentToTaskAddMemberFragment()
+            val action =
+                cl.uandes.taskapp.ui.CreateTasks.CreateTaskFragmentDirections.actionCreateTaskFragmentToTaskAddMemberFragment()
             findNavController().navigate(action)
 
         }

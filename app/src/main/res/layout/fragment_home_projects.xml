@@ -4,77 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeProjectsFragment">
+    tools:context=".ui.HomeProjects.HomeProjectsFragment">
 
-
-    <TextView
-        android:id="@+id/homeProjectsTextView"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="411dp"
         android:layout_height="106dp"
-        android:background="#008ECC"
-        android:gravity="center"
-        android:padding="20sp"
-        android:text="@string/home_projects"
-        android:textSize="50sp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
 
-
-    <SearchView
-        android:id="@+id/projectSearch"
-        android:layout_width="349dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="5dp"
-        android:background="#F3F3F3"
-        android:backgroundTint="#ECECEC"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search..."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-    </SearchView>
+        <TextView
+            android:id="@+id/homeProjectsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:background="#008ECC"
+            android:gravity="center"
+            android:padding="20sp"
+            android:text="@string/home_projects"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+    </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewHomeProjects"
-        android:layout_width="299dp"
-        android:layout_height="470dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="411dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="564dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/projectSearch"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.widget.SearchView
+            android:id="@+id/projectSearch"
+            android:layout_width="349dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="#F3F3F3"
+            android:backgroundTint="#ECECEC"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </android.widget.SearchView>
+
+        <ImageButton
+            android:id="@+id/AddNewProjectButton"
+            android:layout_width="58dp"
+            android:layout_height="match_parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_add_circle_24" />
+    </LinearLayout>
 
 
-    <ImageButton
-        android:id="@+id/AddNewProjectButton"
-        android:layout_width="57dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="104dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
-    <Button
-        android:id="@+id/filterByDateButton"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/log_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:backgroundTint="#9E50F0"
-        android:text="@string/filter_by_date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/projectSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="411dp"
+            android:layout_height="51dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/filterByDateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#9E50F0"
+                android:text="@string/filter_by_date"
+                tools:layout_editor_absoluteX="244dp"
+                tools:layout_editor_absoluteY="292dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHomeProjects"
+            android:layout_width="245dp"
+            android:layout_height="463dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

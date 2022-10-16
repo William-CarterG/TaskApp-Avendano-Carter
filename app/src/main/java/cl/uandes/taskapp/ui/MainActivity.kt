@@ -8,20 +8,42 @@ import androidx.navigation.NavController
 import cl.uandes.taskapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.view.View
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 
+/*
+import cl.uandes.taskapp.data.db.AppDatabase
+import cl.uandes.taskapp.data.repository.ProjectRepository
+import cl.uandes.taskapp.data.repository.TaskRepository
+import cl.uandes.taskapp.data.repository.UserRepository
+import cl.uandes.taskapp.ui.HomeProjects.HomeProjectsViewModel
 
+
+ */
 
 class MainActivity : AppCompatActivity() {
   private lateinit var navController: NavController
   private lateinit var bottomNavigationView: BottomNavigationView
 
+
+  /*
+  private lateinit var appDatabase: AppDatabase
+  private lateinit var projectRepository: ProjectRepository
+  private lateinit var taskRepository: TaskRepository
+  private lateinit var userRepository: UserRepository
+
+   */
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
+
+    //appDatabase = AppDatabase(this)
+    //projectRepository = ProjectRepository(appDatabase)
+
   }
 
   override fun onStart() {
@@ -41,7 +63,7 @@ class MainActivity : AppCompatActivity() {
     bottomNavigationView.setupWithNavController(navController)
 
     navController.addOnDestinationChangedListener { _, destination, _ ->
-      bottomNavigationView.visibility = if(destination.id == R.id.loginFragment) {
+      bottomNavigationView.visibility = if(destination.id == R.id.loginFragment || destination.id == R.id.registerFragment) {
         View.GONE
       } else {
         View.VISIBLE

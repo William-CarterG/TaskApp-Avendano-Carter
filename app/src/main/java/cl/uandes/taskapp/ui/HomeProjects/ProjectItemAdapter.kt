@@ -1,14 +1,13 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.HomeProjects
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cl.uandes.taskapp.R
-import cl.uandes.taskapp.data.model.Project
-
-import org.w3c.dom.Text
+import cl.uandes.taskapp.data.db.entity.Project
 
 class ProjectItemAdapter(
   private val projects: MutableList<Project>,
@@ -44,6 +43,14 @@ class ProjectItemAdapter(
   }
   override fun getItemCount(): Int {
     return projects.size
+  }
+
+  @SuppressLint("NotifyDataSetChanged")
+  fun updateProjects(newProjectList: MutableList<Project>) {
+    projects.clear()
+    projects.addAll(newProjectList)
+
+    notifyDataSetChanged()
   }
 
   interface ActionListener {

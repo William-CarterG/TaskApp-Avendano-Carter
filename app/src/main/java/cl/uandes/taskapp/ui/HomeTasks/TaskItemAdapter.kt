@@ -1,12 +1,14 @@
-package cl.uandes.taskapp.ui
+package cl.uandes.taskapp.ui.HomeTasks
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import cl.uandes.taskapp.R
-import cl.uandes.taskapp.data.model.Task
+import cl.uandes.taskapp.data.db.entity.Project
+import cl.uandes.taskapp.data.db.entity.Task
 
 class TaskItemAdapter (
     private val tasks: MutableList<Task>,
@@ -44,6 +46,16 @@ class TaskItemAdapter (
     override fun getItemCount(): Int {
         return tasks.size
     }
+
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateTasks(newTaskList: MutableList<Task>) {
+        tasks.clear()
+        tasks.addAll(newTaskList)
+
+        notifyDataSetChanged()
+    }
+
 
     interface ActionListener {
         fun goToTaskDetails(task: Task)
