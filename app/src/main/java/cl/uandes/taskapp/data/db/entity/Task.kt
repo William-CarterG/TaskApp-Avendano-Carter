@@ -5,10 +5,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-//@Entity(tableName = "task_table")
-//@Parcelize
+@Entity
+@Parcelize
 data class Task (
-    //@PrimaryKey(autoGenerate = true)
+    @PrimaryKey(autoGenerate = true)
     var id: Long?,
 
     val title: String,
@@ -18,4 +18,4 @@ data class Task (
     val deadline: String,
     val creationDate: String,
     val status: String
-) //: Parcelable
+) : Parcelable
