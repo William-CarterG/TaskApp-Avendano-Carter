@@ -2,7 +2,7 @@ package cl.uandes.taskapp.data.repository
 
 import androidx.lifecycle.LiveData
 
-/*
+
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.entity.Project
 
@@ -16,11 +16,10 @@ class ProjectRepository(
 
     suspend fun deleteProject(project: Project) = projectDatabase.getProjectDao().deleteProject(project)
 
-    suspend fun deleteProjectById(id: String) = projectDatabase.getProjectDao().deleteProjectById(id)
+    suspend fun deleteProjectById(id: Int) = projectDatabase.getProjectDao().deleteProjectById(id)
 
     suspend fun clearProject() = projectDatabase.getProjectDao().clearProject()
 
     fun getAllProjects(): LiveData<List<Project>> = projectDatabase.getProjectDao().getAllProjects()
 }
 
- */
