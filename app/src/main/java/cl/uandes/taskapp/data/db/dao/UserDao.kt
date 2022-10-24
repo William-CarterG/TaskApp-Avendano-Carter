@@ -5,29 +5,29 @@ import androidx.room.*
 import cl.uandes.taskapp.data.db.entity.User
 
 
-/*
+
 @Dao
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE) //if some data is same/conflict, it'll be replace with new data.
-    suspend fun insertUser(user: User)
+    fun insertUser(user: User)
 
     @Update
-    suspend fun updateUser(user: User)
+    fun updateUser(user: User)
 
     @Delete
-    suspend fun deleteUser(user: User)
+    fun deleteUser(user: User)
 
-    @Query("SELECT * FROM user_table ORDER BY id DESC")
+    @Query("SELECT * FROM user ORDER BY id DESC")
     fun getAllUsers(): LiveData<List<User>>
     // why not use suspend ? because Room does not support LiveData with suspended functions.
     // LiveData already works on a background thread and should be used directly without using coroutines
 
-    @Query("DELETE FROM user_table")
-    suspend fun clearUser()
+    @Query("DELETE FROM user")
+    fun clearUser()
 
-    @Query("DELETE FROM user_table WHERE id = :id") //you can use this too, for delete note by id.
-    suspend fun deleteUserById(id: Int)
+    @Query("DELETE FROM user WHERE id = :id") //you can use this too, for delete note by id.
+    fun deleteUserById(id: Int)
 }
-*/
+
  

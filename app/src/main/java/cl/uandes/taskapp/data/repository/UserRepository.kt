@@ -1,7 +1,7 @@
 package cl.uandes.taskapp.data.repository
 
 
-/*
+
 import androidx.lifecycle.LiveData
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.entity.User
@@ -23,4 +23,3 @@ class UserRepository(
     fun getAllUsers(): LiveData<List<User>> = userDatabase.getUserDao().getAllUsers()
 }
 
- */
