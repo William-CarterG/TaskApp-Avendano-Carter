@@ -10,7 +10,7 @@ class UserRepository(
     private val userDatabase: AppDatabase
 ) {
 
-    suspend fun insertUser(user: User) = userDatabase.getUserDao().insertUser(user)
+    fun insertUser(user: User) = userDatabase.getUserDao().insertUser(user)
 
     suspend fun updateUser(user: User) = userDatabase.getUserDao().updateUser(user)
 

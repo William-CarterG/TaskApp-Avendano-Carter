@@ -6,15 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.R
 import cl.uandes.taskapp.databinding.FragmentRegisterBinding
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 import cl.uandes.taskapp.data.db.entity.User
+import cl.uandes.taskapp.ui.HomeProjects.HomeProjectsViewModel
 
 class RegisterFragment : Fragment() {
 
     private lateinit var binding: FragmentRegisterBinding
+    //View model implementation
+    private lateinit var viewModel: RegisterViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +26,8 @@ class RegisterFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentRegisterBinding.inflate(inflater, container, false)
+
+        viewModel = ViewModelProvider(this)[RegisterViewModel::class.java]
         return binding.root
     }
 
@@ -34,16 +40,15 @@ class RegisterFragment : Fragment() {
             val passEntered = binding.editTextTextPassword.text.toString()
             val roleEntered = binding.editTextTextRole.text.toString()
 
-            val userInData = InMemoryDataSource.users.find {it.email == emailEntered}
-
-            if (userInData != null) {
-                Toast.makeText(context,"User already exists.", Toast.LENGTH_LONG).show()
-
-            } else {
-                InMemoryDataSource.users.add(User(InMemoryDataSource.users.size.toLong(), emailEntered, passEntered, roleEntered))
+            val result = viewModel.saveUser(emailEntered, passEntered, roleEntered)
+            if (result == 0) {
+                Toast.makeText(context,"Email account already in use.", Toast.LENGTH_LONG).show()
+            }
+            else if(result == 1){
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             }
         }
+
         toLogin()
     }
 
