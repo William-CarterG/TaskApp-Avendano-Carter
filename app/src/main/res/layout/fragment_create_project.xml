@@ -23,19 +23,6 @@
 
 
     <TextView
-        android:id="@+id/newProjectTitleTextView"
-        android:layout_width="404dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/new_project_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/createNewProject"
         android:layout_width="404dp"
         android:layout_height="26dp"
@@ -49,18 +36,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/newProjectDescriptionTextView"
-        android:layout_width="404dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="284dp"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/new_project_description"
+    <EditText
+        android:id="@+id/EditProject"
+        android:layout_width="375dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/hint_project"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/createNewProject" />
+
+    <EditText
+        android:layout_width="375dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hint_descr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditProject" />
 
     <ImageButton
         android:id="@+id/returnToProjectsButton"
@@ -84,19 +77,6 @@
         android:backgroundTint="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/newProjectDeadlineTextView"
-        android:layout_width="404dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="340dp"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/project_deadline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
