@@ -37,23 +37,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/EditProject"
-        android:layout_width="375dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/hint_project"
+        android:id="@+id/edit_project"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_project"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createNewProject" />
 
     <EditText
-        android:layout_width="375dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/hint_descr"
+        android:id="@+id/edit_description_task"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_descr"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditProject" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_project" />
 
     <ImageButton
         android:id="@+id/returnToProjectsButton"
