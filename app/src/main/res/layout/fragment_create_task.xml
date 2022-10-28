@@ -37,29 +37,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/newTaskTitleTextView2"
-        android:layout_width="404dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="224dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/new_task_title"
+    <EditText
+        android:id="@+id/edit_task"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_task"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/createNewTaskButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/newTaskTitleTextView"
+        app:layout_constraintVertical_bias="0.119" />
 
-    <TextView
-        android:id="@+id/newTaskDescriptionTextView"
-        android:layout_width="404dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="280dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/new_task_description"
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/hint_descr"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_task" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="166dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toTopOf="@+id/createNewTaskButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/returnToProjectsButton"
@@ -83,18 +94,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/newTaskDeadlineTextView"
-        android:layout_width="404dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="336dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/task_deadline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
