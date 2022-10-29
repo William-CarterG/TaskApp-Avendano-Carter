@@ -172,4 +172,17 @@
         app:layout_constraintStart_toEndOf="@+id/taskStatusTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/deleteProject"
+        android:layout_width="116dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/delete_ts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toEndOf="@+id/leaveTaskProfileButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
