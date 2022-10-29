@@ -4,12 +4,15 @@ import androidx.lifecycle.LiveData
 
 
 import cl.uandes.taskapp.data.db.AppDatabase
+import cl.uandes.taskapp.data.db.dao.ProjectDao
 import cl.uandes.taskapp.data.db.entity.Project
+import kotlinx.coroutines.flow.Flow
 
 class ProjectRepository(
-    private val projectDatabase: AppDatabase
+    private val projectDatabase: AppDatabase,
+    private val projectDao: ProjectDao
 ) {
-
+    val allProjects: Flow<List<Project>> = projectDao.getAllProjects()
     suspend fun insertProject(project: Project) = projectDatabase.getProjectDao().insertProject(project)
 
     suspend fun updateProject(project: Project) = projectDatabase.getProjectDao().updateProject(project)
@@ -20,6 +23,6 @@ class ProjectRepository(
 
     suspend fun clearProject() = projectDatabase.getProjectDao().clearProject()
 
-    fun getAllProjects(): LiveData<List<Project>> = projectDatabase.getProjectDao().getAllProjects()
+    //fun getAllProjects(): Flow<List<Project>> = projectDatabase.getProjectDao().getAllProjects()
 }
 
