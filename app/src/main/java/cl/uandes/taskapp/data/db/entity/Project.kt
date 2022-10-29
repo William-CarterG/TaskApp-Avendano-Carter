@@ -2,23 +2,24 @@ package cl.uandes.taskapp.data.db.entity
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 
-@Entity
+@Entity(tableName = "projects")
 @Parcelize
 data class Project(
     @PrimaryKey(autoGenerate = true)
     var id: Long?,
 
-    val title: String,
-    val description: String,
-    val admin: String,
-    val participant: String,
-    val creationDate: String,
-    val deadline: String,
-    val percentageCompletion: String,
-    val status: String
+    @ColumnInfo (name="title") val title: String,
+    @ColumnInfo (name="description") val description: String,
+    @ColumnInfo (name="admin") val admin: String,
+    @ColumnInfo (name="participant") val participant: String,
+    @ColumnInfo (name="creationDate") val creationDate: String,
+    @ColumnInfo (name="deadline") val deadline: String,
+    @ColumnInfo (name="percentageCompletion") val percentageCompletion: String,
+    @ColumnInfo (name="status") val status: String
 ) : Parcelable

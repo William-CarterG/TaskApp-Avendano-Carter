@@ -17,13 +17,13 @@ interface TaskDao {
     @Delete
     fun deleteTask(task: Task)
 
-    @Query("SELECT * FROM task ORDER BY id DESC")
+    @Query("SELECT * FROM tasks ORDER BY id DESC")
     fun getAllTasks(): LiveData<List<Task>>
 
-    @Query("DELETE FROM task")
+    @Query("DELETE FROM tasks")
     fun clearTask()
 
-    @Query("DELETE FROM task WHERE id = :id")
+    @Query("DELETE FROM tasks WHERE id = :id")
     fun deleteTaskById(id: Int)
 }
 

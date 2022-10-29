@@ -17,15 +17,15 @@ interface ProjectDao {
     @Delete
     fun deleteProject(project: Project)
 
-    @Query("SELECT * FROM project ORDER BY id DESC")
+    @Query("SELECT * FROM projects ORDER BY id DESC")
     fun getAllProjects(): Flow<List<Project>>
     // why not use suspend ? because Room does not support LiveData with suspended functions.
     // LiveData already works on a background thread and should be used directly without using coroutines
 
-    @Query("DELETE FROM project")
+    @Query("DELETE FROM projects")
     fun clearProject()
 
-    @Query("DELETE FROM project WHERE id = :id") //you can use this too, for delete note by id.
+    @Query("DELETE FROM projects WHERE id = :id") //you can use this too, for delete note by id.
     fun deleteProjectById(id: Int)
 }
 

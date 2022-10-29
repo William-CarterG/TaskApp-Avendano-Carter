@@ -18,15 +18,15 @@ interface UserDao {
     @Delete
     fun deleteUser(user: User)
 
-    @Query("SELECT * FROM user ORDER BY id DESC")
+    @Query("SELECT * FROM users ORDER BY id DESC")
     fun getAllUsers(): LiveData<List<User>>
     // why not use suspend ? because Room does not support LiveData with suspended functions.
     // LiveData already works on a background thread and should be used directly without using coroutines
 
-    @Query("DELETE FROM user")
+    @Query("DELETE FROM users")
     fun clearUser()
 
-    @Query("DELETE FROM user WHERE id = :id") //you can use this too, for delete note by id.
+    @Query("DELETE FROM users WHERE id = :id") //you can use this too, for delete note by id.
     fun deleteUserById(id: Int)
 }
 
