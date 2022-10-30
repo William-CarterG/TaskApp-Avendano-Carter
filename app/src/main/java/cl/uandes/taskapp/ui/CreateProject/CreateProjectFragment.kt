@@ -1,10 +1,14 @@
 package cl.uandes.taskapp.ui.CreateProject
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import androidx.fragment.app.setFragmentResult
 import cl.uandes.taskapp.databinding.FragmentCreateProjectBinding
 import androidx.navigation.fragment.findNavController
 
@@ -25,7 +29,6 @@ class CreateProjectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         returnToProjects()
         createNewProject()
-
     }
 
     private fun returnToProjects(){
@@ -39,16 +42,12 @@ class CreateProjectFragment : Fragment() {
     }
 
     private fun createNewProject(){
-        val createNewProjectBindingButton = binding.createNewProjectButton
+        lateinit var editProjectView: EditText
+        val button = binding.buttonSave
 
-        createNewProjectBindingButton.setOnClickListener {
+        button.setOnClickListener {
             //Logic of creating and saving the new project
             //...
-
-
-            val action =
-                cl.uandes.taskapp.ui.CreateProject.CreateProjectFragmentDirections.actionCreateProjectFragmentToHomeProjectsFragment()
-            findNavController().navigate(action)
         }
     }
 }

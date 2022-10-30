@@ -49,4 +49,11 @@ class CreateTaskFragment : Fragment() {
 
         }
     }
+
+    private fun createTask() {
+        val createButton = binding.buttonSave
+        createButton.setOnClickListener {
+            // Add task to db
+        }
+    }
 }

@@ -70,4 +70,10 @@
     <string name="stat3">Comments you have written: 30</string>
     <string name="stat4">Success ratio: 85%</string>
     <string name="project">Projects</string>
+    <string name="hint_task">Task...</string>
+    <string name="save">Save</string>
+    <string name="hint_descr">Description...</string>
+    <string name="hint_project">Project...</string>
+    <string name="delete_pr">Delete Project</string>
+    <string name="delete_ts">Delete Task</string>
 </resources>
