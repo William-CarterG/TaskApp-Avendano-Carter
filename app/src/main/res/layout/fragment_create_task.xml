@@ -95,7 +95,7 @@
         app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editCreationDate" />
-    
+
 
     <EditText
         android:id="@+id/editDescription"
@@ -130,7 +130,7 @@
         android:id="@+id/buttonSave"
         android:layout_width="166dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/save"
         app:layout_constraintBottom_toTopOf="@+id/createNewTaskButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,7 +152,7 @@
         android:id="@+id/createNewTaskButton"
         android:layout_width="139dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="76dp"
         android:backgroundTint="@color/green"
         android:text="@string/create_task_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
