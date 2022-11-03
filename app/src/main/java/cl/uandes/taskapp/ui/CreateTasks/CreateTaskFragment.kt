@@ -5,8 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import cl.uandes.taskapp.databinding.FragmentCreateTaskBinding
 import androidx.navigation.fragment.findNavController
+import cl.uandes.taskapp.data.db.AppDatabase
+import cl.uandes.taskapp.data.db.entity.Project
+import cl.uandes.taskapp.data.db.entity.Task
 
 class CreateTaskFragment : Fragment() {
     private lateinit var binding: FragmentCreateTaskBinding
@@ -24,7 +28,7 @@ class CreateTaskFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         returnToProject()
         addMembersToTask()
-
+        createTask()
     }
 
     private fun returnToProject(){
@@ -52,8 +56,27 @@ class CreateTaskFragment : Fragment() {
 
     private fun createTask() {
         val createButton = binding.buttonSave
+        val editTaskView: EditText = binding.editTask
+        val editDescriptionView: EditText = binding.editDescription
+        val editTaskCreatorView: EditText = binding.editTaskCreator
+        val editCommentView: EditText = binding.editComments
+        val editDeadlineView: EditText = binding.editDeadline
+        val editCreationDate: EditText = binding.editCreationDate
+
+        val title = editTaskView.text.toString()
+        val description = editDescriptionView.text.toString()
+        val taskCreator = editTaskCreatorView.text.toString()
+        val comment = editCommentView.text.toString()
+        val deadline = editDeadlineView.text.toString()
+        val creationDate = editCreationDate.text.toString()
+
+
         createButton.setOnClickListener {
-            // Add task to db
+            //Logic of creating and saving the new project
+            //...
+            val db = AppDatabase.invoke(requireContext())
+            val newTask = Task(0, title = title, description = description,taskCreator = taskCreator,comment = comment,deadline=deadline,creationDate=creationDate,"In Progress")
+            db.getTaskDao().insertTask(newTask)
         }
     }
 }
