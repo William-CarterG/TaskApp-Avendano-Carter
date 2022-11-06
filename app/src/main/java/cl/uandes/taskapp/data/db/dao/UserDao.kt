@@ -26,8 +26,8 @@ interface UserDao {
     @Query("DELETE FROM users")
     fun clearUser()
 
-    @Query("DELETE FROM users WHERE id = :id") //you can use this too, for delete note by id.
-    fun deleteUserById(id: Int)
+    //@Query("DELETE FROM users WHERE id = :id") //you can use this too, for delete note by id.
+    //fun deleteUserById(id: Int)
 }
 
  

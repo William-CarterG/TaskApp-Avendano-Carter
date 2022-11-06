@@ -11,6 +11,8 @@ import android.widget.EditText
 import androidx.fragment.app.setFragmentResult
 import cl.uandes.taskapp.databinding.FragmentCreateProjectBinding
 import androidx.navigation.fragment.findNavController
+import cl.uandes.taskapp.data.db.AppDatabase
+import cl.uandes.taskapp.data.db.entity.Project
 
 
 class CreateProjectFragment : Fragment() {
@@ -42,12 +44,28 @@ class CreateProjectFragment : Fragment() {
     }
 
     private fun createNewProject(){
-        lateinit var editProjectView: EditText
         val button = binding.buttonSave
+
+        val editProjectView: EditText = binding.editProject
+        val editDescriptionView: EditText = binding.editDescriptionTask
+        val editAdminView: EditText = binding.editAdmin
+        val editParticipantView: EditText = binding.editParticipant
+        val editCreationDateView: EditText = binding.editCreationDate
+        val editDeadlineView: EditText = binding.editDeadline
+
+        val title = editProjectView.text.toString()
+        val description = editDescriptionView.text.toString()
+        val admin = editAdminView.text.toString()
+        val participant = editParticipantView.text.toString()
+        val creationDate = editCreationDateView.text.toString()
+        val deadline = editDeadlineView.text.toString()
 
         button.setOnClickListener {
             //Logic of creating and saving the new project
             //...
+            val db = AppDatabase.invoke(requireContext())
+            val newProject = Project(0, title=title,description=description,admin=admin,participant=participant,creationDate=creationDate,deadline=deadline,"0%","In Progress")
+            db.getProjectDao().insertProject(newProject)
         }
     }
 }

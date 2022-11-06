@@ -76,4 +76,10 @@
     <string name="hint_project">Project...</string>
     <string name="delete_pr">Delete Project</string>
     <string name="delete_ts">Delete Task</string>
+    <string name="hint_admin">Admin...</string>
+    <string name="hint_participant">Participant...</string>
+    <string name="hint_crdate">Creation Date...</string>
+    <string name="hint_deadline">Deadline...</string>
+    <string name="hint_task_cr">Task Creator... </string>
+    <string name="hint_comment">Comment...</string>
 </resources>

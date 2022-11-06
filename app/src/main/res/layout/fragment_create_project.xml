@@ -37,33 +37,94 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edit_project"
+        android:id="@+id/editProject"
         android:layout_width="373dp"
         android:layout_height="40dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_project"
         android:inputType="textAutoComplete"
         android:minHeight="@dimen/min_height"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createNewProject" />
 
     <EditText
-        android:id="@+id/edit_description_task"
+        android:id="@+id/editDescriptionTask"
         android:layout_width="373dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_descr"
         android:inputType="textAutoComplete"
         android:minHeight="@dimen/min_height"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_project" />
+        app:layout_constraintTop_toBottomOf="@+id/editProject" />
+
+    <EditText
+        android:id="@+id/editAdmin"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_admin"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescriptionTask" />
+
+    <EditText
+        android:id="@+id/editParticipant"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_participant"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAdmin" />
+
+    <EditText
+        android:id="@+id/editCreationDate"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_crdate"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editParticipant" />
+
+    <EditText
+        android:id="@+id/editDeadline"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_deadline"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCreationDate" />
 
     <ImageButton
         android:id="@+id/returnToProjectsButton"
@@ -81,12 +142,12 @@
         android:id="@+id/buttonSave"
         android:layout_width="121dp"
         android:layout_height="59dp"
-        android:text="@string/save"
+        android:layout_marginBottom="92dp"
 
+        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_description_task" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
