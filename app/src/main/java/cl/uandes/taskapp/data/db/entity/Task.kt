@@ -10,7 +10,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Task (
     @PrimaryKey(autoGenerate = true)
-    var id: Long?,
+    val id: Long?=null,
 
     @ColumnInfo (name="title") val title: String,
     @ColumnInfo (name="description") val description: String,
