@@ -1,5 +1,6 @@
 package cl.uandes.taskapp.ui.CreateProject
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,19 +10,22 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.setFragmentResult
+import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.databinding.FragmentCreateProjectBinding
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.data.db.AppDatabase
+import cl.uandes.taskapp.data.db.dao.ProjectDao
 import cl.uandes.taskapp.data.db.entity.Project
-
+import cl.uandes.taskapp.data.repository.ProjectRepository
 
 class CreateProjectFragment : Fragment() {
     private lateinit var binding: FragmentCreateProjectBinding
-
+    private lateinit var createProjectViewModel: CreateProjectViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        createProjectViewModel = ViewModelProvider(this)[CreateProjectViewModel::class.java]
         binding = FragmentCreateProjectBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -63,9 +67,10 @@ class CreateProjectFragment : Fragment() {
         button.setOnClickListener {
             //Logic of creating and saving the new project
             //...
-            val db = AppDatabase.invoke(requireContext())
+            //val db = AppDatabase.invoke(requireContext())
             val newProject = Project(0, title=title,description=description,admin=admin,participant=participant,creationDate=creationDate,deadline=deadline,"0%","In Progress")
-            db.getProjectDao().insertProject(newProject)
+            //db.getProjectDao().getAllProjects()
+            createProjectViewModel.insert(newProject)
         }
     }
 }
