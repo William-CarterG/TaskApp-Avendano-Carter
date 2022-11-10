@@ -50,21 +50,22 @@ class CreateProjectFragment : Fragment() {
     private fun createNewProject(){
         val button = binding.buttonSave
 
-        val editProjectView: EditText = binding.editProject
-        val editDescriptionView: EditText = binding.editDescriptionTask
-        val editAdminView: EditText = binding.editAdmin
-        val editParticipantView: EditText = binding.editParticipant
-        val editCreationDateView: EditText = binding.editCreationDate
-        val editDeadlineView: EditText = binding.editDeadline
-
-        val title = editProjectView.text.toString()
-        val description = editDescriptionView.text.toString()
-        val admin = editAdminView.text.toString()
-        val participant = editParticipantView.text.toString()
-        val creationDate = editCreationDateView.text.toString()
-        val deadline = editDeadlineView.text.toString()
 
         button.setOnClickListener {
+            val editProjectView: EditText = binding.editProject
+            val editDescriptionView: EditText = binding.editDescriptionTask
+            val editAdminView: EditText = binding.editAdmin
+            val editParticipantView: EditText = binding.editParticipant
+            val editCreationDateView: EditText = binding.editCreationDate
+            val editDeadlineView: EditText = binding.editDeadline
+
+            val title = editProjectView.text.toString()
+            val description = editDescriptionView.text.toString()
+            val admin = editAdminView.text.toString()
+            val participant = editParticipantView.text.toString()
+            val creationDate = editCreationDateView.text.toString()
+            val deadline = editDeadlineView.text.toString()
+
             //Logic of creating and saving the new project
             //...
             //val db = AppDatabase.invoke(requireContext())
