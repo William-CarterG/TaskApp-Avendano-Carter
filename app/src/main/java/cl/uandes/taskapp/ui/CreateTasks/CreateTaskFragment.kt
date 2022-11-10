@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.databinding.FragmentCreateTaskBinding
 import androidx.navigation.fragment.findNavController
@@ -80,6 +81,7 @@ class CreateTaskFragment : Fragment() {
 
             val newTask = Task(title = title, description = description,taskCreator = taskCreator,comment = comment,deadline=deadline,creationDate=creationDate,status="In Progress")
             createTaskViewModel.insert(newTask)
+            Toast.makeText(requireContext(),"Task successfully created!",Toast.LENGTH_LONG).show()
         }
     }
 }

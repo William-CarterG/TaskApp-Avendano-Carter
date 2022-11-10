@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.databinding.FragmentCreateProjectBinding
@@ -69,9 +70,10 @@ class CreateProjectFragment : Fragment() {
             //Logic of creating and saving the new project
             //...
             //val db = AppDatabase.invoke(requireContext())
-            val newProject = Project(0, title=title,description=description,admin=admin,participant=participant,creationDate=creationDate,deadline=deadline,"0%","In Progress")
+            val newProject = Project( title=title,description=description,admin=admin,participant=participant,creationDate=creationDate,deadline=deadline, percentageCompletion = "0%",status="In Progress")
             //db.getProjectDao().getAllProjects()
             createProjectViewModel.insert(newProject)
+            Toast.makeText(requireContext(),"Project successfully created!", Toast.LENGTH_LONG).show()
         }
     }
 }
