@@ -6,19 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.databinding.FragmentCreateTaskBinding
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.entity.Project
 import cl.uandes.taskapp.data.db.entity.Task
+import cl.uandes.taskapp.ui.CreateProject.CreateProjectViewModel
 
 class CreateTaskFragment : Fragment() {
     private lateinit var binding: FragmentCreateTaskBinding
-
+    private lateinit var createTaskViewModel: CreateTaskViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
+        createTaskViewModel = ViewModelProvider(this)[CreateTaskViewModel::class.java]
         binding = FragmentCreateTaskBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -56,27 +59,27 @@ class CreateTaskFragment : Fragment() {
 
     private fun createTask() {
         val createButton = binding.buttonSave
-        val editTaskView: EditText = binding.editTask
-        val editDescriptionView: EditText = binding.editDescription
-        val editTaskCreatorView: EditText = binding.editTaskCreator
-        val editCommentView: EditText = binding.editComments
-        val editDeadlineView: EditText = binding.editDeadline
-        val editCreationDate: EditText = binding.editCreationDate
-
-        val title = editTaskView.text.toString()
-        val description = editDescriptionView.text.toString()
-        val taskCreator = editTaskCreatorView.text.toString()
-        val comment = editCommentView.text.toString()
-        val deadline = editDeadlineView.text.toString()
-        val creationDate = editCreationDate.text.toString()
 
 
         createButton.setOnClickListener {
-            //Logic of creating and saving the new project
+            //Logic of creating and saving the new task
             //...
-            val db = AppDatabase.invoke(requireContext())
-            val newTask = Task(0, title = title, description = description,taskCreator = taskCreator,comment = comment,deadline=deadline,creationDate=creationDate,"In Progress")
-            db.getTaskDao().insertTask(newTask)
+            val editTaskView: EditText = binding.editTask
+            val editDescriptionView: EditText = binding.editDescription
+            val editTaskCreatorView: EditText = binding.editTaskCreator
+            val editCommentView: EditText = binding.editComments
+            val editDeadlineView: EditText = binding.editDeadline
+            val editCreationDate: EditText = binding.editCreationDate
+
+            val title = editTaskView.text.toString()
+            val description = editDescriptionView.text.toString()
+            val taskCreator = editTaskCreatorView.text.toString()
+            val comment = editCommentView.text.toString()
+            val deadline = editDeadlineView.text.toString()
+            val creationDate = editCreationDate.text.toString()
+
+            val newTask = Task(title = title, description = description,taskCreator = taskCreator,comment = comment,deadline=deadline,creationDate=creationDate,status="In Progress")
+            createTaskViewModel.insert(newTask)
         }
     }
 }
