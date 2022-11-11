@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_homeProjectsFragment_to_userProfileFragment"
             app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_homeProjectsFragment_to_updateProjectFragment"
+            app:destination="@id/updateProjectFragment" />
 
     </fragment>
     <fragment
@@ -219,6 +222,14 @@
         <action
             android:id="@+id/action_userProfileFragment_to_homeTasksFragment"
             app:destination="@id/homeTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProjectFragment"
+        android:name="cl.uandes.taskapp.ui.UpdateProject.UpdateProjectFragment"
+        android:label="UpdateProjectFragment" >
+        <action
+            android:id="@+id/action_updateProjectFragment_to_homeProjectsFragment"
+            app:destination="@id/homeProjectsFragment" />
     </fragment>
 
 </navigation>
