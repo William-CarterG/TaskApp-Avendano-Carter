@@ -83,4 +83,6 @@
     <string name="hint_task_cr">Task Creator... </string>
     <string name="hint_comment">Comment...</string>
     <string name="update_project">Update Project</string>
+    <string name="hint_percentage">Percentage...</string>
+    <string name="hint_status">Status...</string>
 </resources>

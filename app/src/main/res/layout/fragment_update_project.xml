@@ -27,7 +27,7 @@
         android:layout_width="356dp"
         android:layout_height="27dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="120dp"
         android:backgroundTint="#FFFFFF"
         android:text="@string/update_project"
         android:textSize="20sp"
@@ -37,70 +37,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editProject"
-        android:layout_width="373dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif-light"
-        android:hint="@string/hint_project"
-        android:inputType="textAutoComplete"
-        android:minHeight="@dimen/min_height"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createNewProject" />
-
-    <EditText
-        android:id="@+id/editDescriptionTask"
-        android:layout_width="373dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="sans-serif-light"
-        android:hint="@string/hint_descr"
-        android:inputType="textAutoComplete"
-        android:minHeight="@dimen/min_height"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editProject" />
-
-    <EditText
-        android:id="@+id/editAdmin"
-        android:layout_width="373dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="sans-serif-light"
-        android:hint="@string/hint_admin"
-        android:inputType="textAutoComplete"
-        android:minHeight="@dimen/min_height"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editDescriptionTask" />
-
-    <EditText
-        android:id="@+id/editParticipant"
-        android:layout_width="373dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-light"
-        android:hint="@string/hint_participant"
-        android:inputType="textAutoComplete"
-        android:minHeight="@dimen/min_height"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editAdmin" />
-
-    <EditText
         android:id="@+id/editCreationDate"
         android:layout_width="373dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_crdate"
         android:inputType="textAutoComplete"
@@ -112,10 +52,69 @@
         app:layout_constraintTop_toBottomOf="@+id/editParticipant" />
 
     <EditText
+        android:id="@+id/editParticipant"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_participant"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAdmin" />
+
+    <EditText
+        android:id="@+id/editDescriptionTask"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_descr"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProject" />
+
+    <EditText
+        android:id="@+id/editPercentage"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/hint_percentage"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDeadline" />
+
+    <EditText
+        android:id="@+id/editAdmin"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_admin"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescriptionTask" />
+
+    <EditText
         android:id="@+id/editDeadline"
         android:layout_width="373dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
         android:hint="@string/hint_deadline"
         android:inputType="textAutoComplete"
@@ -125,6 +124,38 @@
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editCreationDate" />
+
+    <EditText
+        android:id="@+id/editProject"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_project"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createNewProject" />
+
+    <EditText
+        android:id="@+id/editStatus"
+        android:layout_width="373dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/hint_status"
+        android:inputType="textAutoComplete"
+        android:minHeight="@dimen/min_height"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPercentage"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/returnToProjectsButton"
@@ -142,7 +173,7 @@
         android:id="@+id/buttonSave"
         android:layout_width="121dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="88dp"
 
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
