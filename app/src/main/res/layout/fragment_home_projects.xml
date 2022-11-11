@@ -104,14 +104,38 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHomeProjects"
             android:layout_width="245dp"
-            android:layout_height="463dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.072" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <EditText
+        android:id="@+id/projectToDelete"
+        android:layout_width="245dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="120dp"
+        android:hint="@string/hint_project"
+        android:autofillHints="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteProject"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/deleteProject"
+        android:layout_width="121dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/delete_pr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

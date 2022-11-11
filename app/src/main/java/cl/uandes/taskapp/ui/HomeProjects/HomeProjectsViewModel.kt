@@ -25,4 +25,20 @@ class HomeProjectsViewModel(application: Application): AndroidViewModel(applicat
             projectListLiveData.postValue(InMemoryDataSource.projects)
         }
     }
+
+    private val repository: ProjectRepository
+    private val allProjects: LiveData<List<Project>>
+
+    init {
+        val db = AppDatabase.invoke(application)
+        val projectDao = db.getProjectDao()
+        repository = ProjectRepository(db,projectDao)
+        allProjects = repository.allProjects.asLiveData()
+    }
+
+    fun delete(title: String) {
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteProjectByTitle(title)
+        }
+    }
 }
