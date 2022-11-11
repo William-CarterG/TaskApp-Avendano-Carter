@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.databinding.FragmentCreateTaskBinding
 import androidx.navigation.fragment.findNavController
+import cl.uandes.taskapp.R
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.entity.Project
 import cl.uandes.taskapp.data.db.entity.Task
@@ -82,6 +83,7 @@ class CreateTaskFragment : Fragment() {
             val newTask = Task(title = title, description = description,taskCreator = taskCreator,comment = comment,deadline=deadline,creationDate=creationDate,status="In Progress")
             createTaskViewModel.insert(newTask)
             Toast.makeText(requireContext(),"Task successfully created!",Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_createTaskFragment_to_homeTasksFragment)
         }
     }
 }
