@@ -23,7 +23,7 @@ interface ProjectDao {
     // LiveData already works on a background thread and should be used directly without using coroutines
 
 
-    @Query("DELETE FROM projects WHERE id = :id") //you can use this too, for delete note by id.
-    fun deleteProjectById(id: Int)
+    @Query("DELETE FROM projects WHERE title = :title") //you can use this too, for delete note by id.
+    fun deleteProjectByTitle(title: String)
 }
 
