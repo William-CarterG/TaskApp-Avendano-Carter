@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeTasksBinding
 import cl.uandes.taskapp.R
@@ -55,6 +57,7 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         observeTaskList()
 
         toCreateTask()
+        deleteTask()
     }
 
     private fun observeTaskList(){
@@ -86,5 +89,16 @@ class HomeTasksFragment : Fragment(), TaskItemAdapter.ActionListener {
         "taskCreator" to task.taskCreator, "taskComment" to task.comment, "taskDeadline" to task.deadline, "taskCreationDate" to task.creationDate
             , "taskStatus" to task.status)
         findNavController().navigate(R.id.action_homeTasksFragment_to_taskProfileFragment, bundle)
+    }
+
+    private fun deleteTask() {
+        val deleteButton = binding.deleteTask
+
+        deleteButton.setOnClickListener {
+            val deleteTask: EditText = binding.taskToDelete
+            val task = deleteTask.text.toString()
+            viewModel.delete(task)
+            Toast.makeText(requireContext(),"Task deleted successfully.", Toast.LENGTH_LONG).show()
+        }
     }
 }
