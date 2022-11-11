@@ -14,9 +14,11 @@ import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.ViewModelProvider
 import cl.uandes.taskapp.databinding.FragmentCreateProjectBinding
 import androidx.navigation.fragment.findNavController
+import cl.uandes.taskapp.data.datasources.InMemoryDataSource
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.dao.ProjectDao
 import cl.uandes.taskapp.data.db.entity.Project
+import cl.uandes.taskapp.data.db.entity.User
 import cl.uandes.taskapp.data.repository.ProjectRepository
 
 class CreateProjectFragment : Fragment() {
@@ -73,6 +75,7 @@ class CreateProjectFragment : Fragment() {
             val newProject = Project( title=title,description=description,admin=admin,participant=participant,creationDate=creationDate,deadline=deadline, percentageCompletion = "0%",status="In Progress")
             //db.getProjectDao().getAllProjects()
             createProjectViewModel.insert(newProject)
+            InMemoryDataSource.projects.add(Project( title=title,description=description,admin=admin,participant=participant,creationDate=creationDate,deadline=deadline, percentageCompletion = "0%",status="In Progress"))
             Toast.makeText(requireContext(),"Project successfully created!", Toast.LENGTH_LONG).show()
         }
     }
