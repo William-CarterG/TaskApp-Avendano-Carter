@@ -19,9 +19,7 @@ class ProjectRepository(
 
     suspend fun deleteProject(project: Project) = projectDatabase.getProjectDao().deleteProject(project)
 
-    suspend fun deleteProjectById(id: Int) = projectDatabase.getProjectDao().deleteProjectById(id)
-
-    suspend fun clearProject() = projectDatabase.getProjectDao().clearProject()
+    suspend fun deleteProjectByTitle(title: String) = projectDatabase.getProjectDao().deleteProjectByTitle(title)
 
     //fun getAllProjects(): Flow<List<Project>> = projectDatabase.getProjectDao().getAllProjects()
 }

@@ -20,9 +20,7 @@ class TaskRepository(
 
     suspend fun deleteTask(task: Task) = taskDatabase.getTaskDao().deleteTask(task)
 
-    suspend fun deleteTaskById(id: Int) = taskDatabase.getTaskDao().deleteTaskById(id)
-
-    suspend fun clearTask() = taskDatabase.getTaskDao().clearTask()
+    suspend fun deleteTaskByTitle(title: String) = taskDatabase.getTaskDao().deleteTaskByTitle(title)
 
     //fun getAllTasks(): LiveData<List<Task>> = taskDatabase.getTaskDao().getAllTasks()
 }

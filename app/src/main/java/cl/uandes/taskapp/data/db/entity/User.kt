@@ -10,7 +10,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class User (
     @PrimaryKey(autoGenerate = true)
-    var id: Long?,
+    var id: Long?=null,
 
     @ColumnInfo(name="email") val email: String,
     @ColumnInfo (name="password") val password: String,

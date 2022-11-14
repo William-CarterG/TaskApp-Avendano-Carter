@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import cl.uandes.taskapp.databinding.FragmentHomeProjectsBinding
 import cl.uandes.taskapp.R
@@ -70,6 +72,7 @@ class HomeProjectsFragment : Fragment(), ProjectItemAdapter.ActionListener {
 
         filterProjectsByDate()
         createNewProject()
+        deleteProject()
     }
 
     private  fun observeProjectList() {
@@ -116,5 +119,16 @@ class HomeProjectsFragment : Fragment(), ProjectItemAdapter.ActionListener {
             "projectDeadline" to project.deadline, "projectPercentage" to project.percentageCompletion,
             "projectStatus" to project.status)
         findNavController().navigate(R.id.action_homeProjectsFragment_to_projectProfileFragment, bundle)
+    }
+
+    private fun deleteProject() {
+        val deleteButton = binding.deleteProject
+
+        deleteButton.setOnClickListener {
+            val deleteProject: EditText = binding.projectToDelete
+            val project = deleteProject.text.toString()
+            viewModel.delete(project)
+            Toast.makeText(requireContext(),"Project deleted successfully.",Toast.LENGTH_LONG).show()
+        }
     }
 }

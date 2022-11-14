@@ -17,9 +17,7 @@ class UserRepository(
     suspend fun deleteUser(user: User) = userDatabase.getUserDao().deleteUser(user)
 
     //suspend fun deleteUserById(id: Int) = userDatabase.getUserDao().deleteUserById(id)
-
-    suspend fun clearUser() = userDatabase.getTaskDao().clearTask()
-
+    
     fun getAllUsers(): LiveData<List<User>> = userDatabase.getUserDao().getAllUsers()
 }
 

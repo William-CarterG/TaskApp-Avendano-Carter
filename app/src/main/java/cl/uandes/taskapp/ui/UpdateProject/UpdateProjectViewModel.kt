@@ -1,15 +1,17 @@
-package cl.uandes.taskapp.ui.CreateProject
+package cl.uandes.taskapp.ui.UpdateProject
 
 import android.app.Application
-import androidx.lifecycle.*
-import cl.uandes.taskapp.data.datasources.InMemoryDataSource
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
 import cl.uandes.taskapp.data.db.AppDatabase
 import cl.uandes.taskapp.data.db.entity.Project
 import cl.uandes.taskapp.data.repository.ProjectRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class CreateProjectViewModel(application: Application) : AndroidViewModel(application) {
+class UpdateProjectViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: ProjectRepository
     private val allProjects: LiveData<List<Project>>
 
@@ -20,9 +22,9 @@ class CreateProjectViewModel(application: Application) : AndroidViewModel(applic
         allProjects = repository.allProjects.asLiveData()
     }
 
-    fun insert(project: Project) {
+    fun update(project: Project) {
         viewModelScope.launch(Dispatchers.IO){
-            repository.insertProject(project)
+            repository.updateProject(project)
         }
     }
 }
