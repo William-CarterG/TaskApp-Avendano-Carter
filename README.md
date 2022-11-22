@@ -1,14 +1,22 @@
-# Task App
+# Task App - A project by Carmencita Avendaño & William Carter
 
-TaskApp is a mobile app that allows users to organize projects, join them, and participate of its chores.
+TaskApp is a mobile app project that allows users to create and organize projects together with the rest of their teams. The idea is to make all the information of a project accesible to its development team, in real time. This way, every member of a team can have a clear idea about how the project is going, how much time they have left, what tasks are left to be done, etc. 
 
-## Team
+## About Us
+We are Carmencita Avendaño & William Carter, two computer science engineering students at Universidad de Los Andes. We started this project during one of our Mobile App classes, and decided to continue for two main reasons:
 
-1. Carmencita Avendaño
-2. William Carter
+- It's an opportunity to keep developing our skills in the mobile development area.
+- It's an exciting personal project where we can put both our time and effort towards an objective.
+- It's a place where we showcase the knowledge we've acquired.
 
+We are very motivated towards taking this project to its full potential!!
 
-## Important Info
+## What we are working on
+
+Carmencita:
+William: Improved UI to see projects.
+
+## Info for use
 To log in to the app, you must use the following values as credentials: 
 - Email: Anyone that matches email format (e.g., something@uandes.com)
 - Password: 123456
