@@ -12,8 +12,6 @@ We are Carmencita Avendaño & William Carter, two computer science engineering s
 We are very motivated towards taking this project to its full potential!!
 
 ## What we are working on
-
-Carmencita:
 William: Improved UI to see projects.
 
 ## Info for use
